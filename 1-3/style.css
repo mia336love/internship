@@ -21,7 +21,7 @@ body {
     flex-direction: row;
 
     justify-content: space-around;
-
+    
 }
 
 .main-nav-list {
@@ -61,7 +61,21 @@ body {
 .car-section-main {
     display: flex;
     flex-direction: column;
+
+    padding-top: 2em;
+    padding-bottom: 5em;
     /* margin-left: 15%; */
+}
+
+.car-section-main-title {
+    font-size: 6em;
+    font-family: "Mohave", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+
+    filter: invert();
+    text-align: center;
 }
 
 .car-section {
@@ -160,15 +174,45 @@ body {
 /* =================================================================== */
 
 #nav-search-form {
+    display: flex;
+
+    height: 3em;
 }
 
-#nav-search-form img {
+.nav-search-button {
+    width: 3.6em;
+    background-color: rgb(182,30,0);
+
+    border-style: none;
+
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.loupe-btn-img {
     width: 2em;
     height: 2em;
+
+    filter: invert();
+    /* border-style: none; */
+
+    /* fill: white; */
 }
 
-#nav-search-form input {
-    height: 2em;
+.nav-search-inp {
+    /* width: 17em; */
+    font-size: 1.6em;
+    font-family: "Khula", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    padding-left: 0.6em;
+
+    border-style: none;
+    outline:none;
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .main-page-cars-link:hover {
@@ -179,34 +223,48 @@ body {
 
 /* main-page-search */
 
-#main-page-search {
+.main-page-search {
     display: flex;
     /* flex-direction: column; */
 
     justify-content: space-between;
     margin: auto;
 
-    width: 60em;
+    width: 70em;
 
     
 }
 
-#main-page-search label {
+.main-page-search label {
     filter: invert();
 
     font-family: "Khula", sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 1.5em;
 }
 
-#main-page-search h2 {
+.search-form-title {
     filter: invert();
 
     font-family: "Mohave", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
+    font-size: 2.2em;
+
 }
+
+.search-cars-form {
+    border: 1px solid white;
+    width: 60%;
+}
+
+.search-event-form {
+    border: 1px solid white;
+    width: 40%;
+}
+
 
 /* #engine-power-range::-webkit-slider-runnable-track {
     background-color: lightgray;
@@ -219,14 +277,14 @@ body {
 
 input[type="range"] {
     -webkit-appearance: none;
-    width: 70%;
+    width: 40%;
     height: 10px;
     border-radius: 10px;
     /* background: linear-gradient(to right, red 0%, red 50%, blue 50%, blue 100%) */
 }
 
 input[type="range"]::-webkit-slider-thumb {
-    background-color: red;
+    background-color: rgb(233, 0, 0);
     -webkit-appearance: none;
     height: 20px;
     width: 20px;
@@ -234,6 +292,6 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
-    background-color: green; /* Цвет ползунка при наведении */
+    background-color: rgb(196, 33, 0)
 }
 

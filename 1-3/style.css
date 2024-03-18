@@ -1,0 +1,239 @@
+body {
+    background: rgb(55, 55, 55);
+    background: linear-gradient(162deg, rgb(19, 19, 19) 0%, rgb(41, 41, 41) 50%, rgb(72, 72, 72) 100%);
+
+    
+
+}
+
+#main-logo {
+    height: 7em;
+
+    position: relative;
+    left: 5em;
+    /* top: 1.4em; */
+}
+
+/* navigation */
+
+#main-navigation {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+
+}
+
+.main-nav-list {
+    display: flex;
+    justify-content: space-around;
+    width: 11em;
+
+    filter: invert(1);
+
+    font-size: 3em;
+    list-style-type: none;
+
+    font-family: "Mohave", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+#nav-search-form {
+    position: relative;
+    right: 7em;
+    top: 3.4em;
+
+    justify-content: space-between;
+}
+
+.main-nav-list li:hover {
+    color: rgb(73, 225, 255);
+    /* filter: inherit(); */
+    /* border-bottom: 3px solid rgb(233, 233, 233); */
+
+}
+
+/* =================================================================== */
+/* sections */
+
+.car-section-main {
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 15%; */
+}
+
+.car-section {
+    display: flex;
+}
+
+#car1, #car3{
+    align-self: center;
+    position: relative;
+    right: 10em;
+}
+
+#car2 {
+    align-self: center;
+    position: relative;
+    left: 10em;
+    /* align-items: flex-end; */
+}
+
+/* #car3 {
+    align-self: center;
+    position: relative;
+    right: 20em;
+
+} */
+
+
+.car-text {
+    font-size: 1.7em;
+
+    padding: 2em;
+    /* padding-top: 2em; */
+    /* padding-bottom: 10em; */
+
+    mix-blend-mode: difference;
+}
+
+.car-image {
+    height: 30em;
+    border-radius: 10px;
+
+    mix-blend-mode: difference; /* делает менее контрастным, мб оставить */
+}
+
+.car-title {
+    font-size: 1.7em;
+    filter: invert(1);  /* для значения color у этого блока */
+    /* font-family: "Eczar", serif;
+    font-optical-sizing: auto;
+    font-weight: 550;
+    font-style: normal; */
+
+    font-family: "Mohave", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+.car-description {
+    font-size: 80%;
+    display: inline-block;
+    width: 20em;
+    filter: invert(1);
+
+    font-family: "Khula", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.car-link {
+    display: flex;
+    font-size: 110%;
+    color: inherit;
+    filter: invert(1);
+    /* text-decoration: none; */
+
+    font-family: "Khula", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* .car-button {
+    width: 20em;
+    height: 5em;
+    border: none;
+    background-color: inherit;
+    justify-content: space-between;
+} */
+
+.car-button img {
+    /* width: 20em; */
+    height: 5em;
+}
+
+/* =================================================================== */
+
+#nav-search-form {
+}
+
+#nav-search-form img {
+    width: 2em;
+    height: 2em;
+}
+
+#nav-search-form input {
+    height: 2em;
+}
+
+.main-page-cars-link:hover {
+    color: red;
+}
+
+/* =================================================================== */
+
+/* main-page-search */
+
+#main-page-search {
+    display: flex;
+    /* flex-direction: column; */
+
+    justify-content: space-between;
+    margin: auto;
+
+    width: 60em;
+
+    
+}
+
+#main-page-search label {
+    filter: invert();
+
+    font-family: "Khula", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#main-page-search h2 {
+    filter: invert();
+
+    font-family: "Mohave", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* #engine-power-range::-webkit-slider-runnable-track {
+    background-color: lightgray;
+    width: 100px;
+    height: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgb(234, 234, 234);
+} */
+
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 70%;
+    height: 10px;
+    border-radius: 10px;
+    /* background: linear-gradient(to right, red 0%, red 50%, blue 50%, blue 100%) */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background-color: red;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: green; /* Цвет ползунка при наведении */
+}
+

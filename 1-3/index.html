@@ -97,38 +97,42 @@
         <form class="search-cars-form">
             <h2 class="search-form-title">Search car</h2>
 
-            <!-- year -->
-            <label for="search-cars-year">Year:</label>
-            <input type="number" name="search-cars-year" class="search-cars-year" min="1950" max="2050"><br>
+                <!-- year -->
+                <fieldset>
+                    <legend>Year:</legend>
+                    <input type="number" name="search-cars-year" class="search-cars-year" min="1950" max="2050"><br>
 
-            <!-- mark -->
-            <label for="search-cars-mark">Marks:</label><br>
-            <form class="search-cars-mark">
-                <input type="checkbox" id="mark1" name="mark1" value="Nissan">
-                <label for="mark1">Nissan</label>
+                </fieldset>
 
-                <input type="checkbox" id="mark2" name="mark2" value="Mazda">
-                <label for="mark2">Mazda</label>
+                <!-- mark -->
+                <fieldset>
+                    <legend>Mark:</legend>
+                    <input type="checkbox" id="mark1" name="mark" value="Nissan">
+                    <label for="mark1">Nissan</label>
 
-                <input type="checkbox" id="mark3" name="mark3" value="Toyota">
-                <label for="mark3">Toyota</label><br>
+                    <input type="checkbox" id="mark2" name="mark" value="Mazda">
+                    <label for="mark2">Mazda</label>
 
-                <input type="checkbox" id="mark4" name="mark4" value="Subaru">
-                <label for="mark4">Subaru</label>
+                    <input type="checkbox" id="mark3" name="mark" value="Toyota">
+                    <label for="mark3">Toyota</label><br>
 
-                <input type="checkbox" id="mark5" name="mark5" value="Honda">
-                <label for="mark5">Honda</label>
+                    <input type="checkbox" id="mark4" name="mark" value="Subaru">
+                    <label for="mark4">Subaru</label>
 
-                <input type="checkbox" id="mark6" name="mark6" value="Subaru">
-                <label for="mark6">Subaru</label><br>
+                    <input type="checkbox" id="mark5" name="mark" value="Honda">
+                    <label for="mark5">Honda</label>
 
-                <!-- power engine -->
-                <label for="engine-power-range">Engine power:</label>
-                <input type="range" class="engine-power-range"><br>
+                    <input type="checkbox" id="mark6" name="mark" value="Subaru">
+                    <label for="mark6">Subaru</label><br>
+                </fieldset>
+                
+                <!-- engine power -->
+                <fieldset>
+                    <legend>Engine power:</legend>
+                    <input type="range" class="engine-power-range"><br>
+                </fieldset>
 
                 <button type="submit" class="search-btn">Find</button>
-
-            </form>
 
         </form>
 
@@ -136,15 +140,58 @@
             <h2 class="search-form-title">Search event</h2>
 
             <!-- key words -->
-            <label for="search-event-key-words">Key words:</label>
-            <input type="text" id="search-event-key-words"><br>
-
+            <fieldset>
+                <legend>Key words:</legend>
+                <!-- <label for="search-event-key-words">Key words:</label> -->
+                <input type="text" id="search-event-key-words"><br>
+            </fieldset>
+            
             <!-- date -->
-            <label for="search-event-date">Date:</label>
-            <input type="date" id="search-event-date">
+            <fieldset>
+                <legend>Date:</legend>
+                <!-- <label for="search-event-key-words">Key words:</label> -->
+                <input type="date" id="search-event-date"><br>
+            </fieldset>
+
+            <!-- city -->
+            <fieldset>
+                <legend>City:</legend>
+                <select name="city-select" id="city-select">
+                    <option value="Tokio">Tokio</option>
+                    <option value="Kyoto" selected>Kyoto</option>
+                    <option value="Osaka">Osaka</option>
+                    <option value="Nara">Nara</option>
+                </select>
+            </fieldset>
+
+            <!-- price -->
+            <fieldset>
+                <legend>Price:</legend>
+                <input type="radio" id="low-price" name="price" value="low-price">
+                <label for="low-price">$</label>
+
+                <input type="radio" id="average-price" name="price" value="average-price">
+                <label for="age2">$$</label>
+                
+                <input type="radio" id="high-price" name="price" value="high-price">
+                <label for="high-price">$$$</label><br>
+            </fieldset>
+
+            <!-- type -->
+            <fieldset>
+                <legend>Type:</legend>
+                <input type="checkbox" id="type1" name="type" value="concert">
+                <label for="type1">concert</label>
+
+                <input type="checkbox" id="type2" name="type" value="exhibition">
+                <label for="type2">exhibition</label>
+
+                <input type="checkbox" id="type3" name="type" value="race">
+                <label for="type3">race</label><br>
+            </fieldset>
+
+            <button type="submit" class="search-btn">Find</button>
         </form>
-
-
     </div>
 
 </body>

@@ -53,7 +53,7 @@
     <div class="car-section-main">
         <!-- <h2 class="car-section-main-title">‧₊˚✧ Choose Your Character ✧˚₊‧</h2> -->
         
-        <h2 class="car-section-main-title">╔═══════╡Look╞═══════╗</h2>
+        <h2 class="main-page-title">= LOOK =</h2>
         
         <section class="car-section" id="car1">
             <img class="car-image" src="./images/Nissan GTR R34.jpg" alt="Nissan GTR R34">
@@ -90,18 +90,17 @@
 
     </div>
 
-    <h2 class="car-section-main-title">╔═══════╡Find╞═══════╗</h2>
+    <h2 class="main-page-title">= SEARCH =</h2>
 
     <div class="main-page-search">
 
         <form class="search-cars-form">
-            <h2 class="search-form-title">Search car</h2>
+            <h3 class="search-form-title">Cars</h3>
 
                 <!-- year -->
                 <fieldset>
                     <legend>Year:</legend>
-                    <input type="number" name="search-cars-year" class="search-cars-year" min="1950" max="2050"><br>
-
+                    <input type="number" class="main-search-input" name="search-cars-year" id="search-cars-year" style="width: 4em; padding-left: 1.5em;" min="1950" max="2050"><br>
                 </fieldset>
 
                 <!-- mark -->
@@ -122,41 +121,39 @@
                     <input type="checkbox" id="mark5" name="mark" value="Honda">
                     <label for="mark5">Honda</label>
 
-                    <input type="checkbox" id="mark6" name="mark" value="Subaru">
-                    <label for="mark6">Subaru</label><br>
+                    <input type="checkbox" id="mark6" name="mark" value="Mitsubishi">
+                    <label for="mark6">Mitsubishi</label><br>
                 </fieldset>
                 
                 <!-- engine power -->
                 <fieldset>
                     <legend>Engine power:</legend>
-                    <input type="range" class="engine-power-range"><br>
+                    <input type="range" id="engine-power-range"><br>
                 </fieldset>
 
-                <button type="submit" class="search-btn">Find</button>
+                <button type="submit" class="search-btn" style="width: 100%;">Find</button>
 
         </form>
 
         <form class="search-event-form">
-            <h2 class="search-form-title">Search event</h2>
+            <h3 class="search-form-title">Events</h3>
 
             <!-- key words -->
             <fieldset>
                 <legend>Key words:</legend>
-                <!-- <label for="search-event-key-words">Key words:</label> -->
-                <input type="text" id="search-event-key-words"><br>
+                <input type="text" class="main-search-input" id="search-event-key-words" style="padding-left: 0.6em; width: 95%;"><br>
             </fieldset>
             
             <!-- date -->
             <fieldset>
                 <legend>Date:</legend>
-                <!-- <label for="search-event-key-words">Key words:</label> -->
-                <input type="date" id="search-event-date"><br>
+                <input type="date" class="main-search-input" id="search-event-date" style="width: 53%;"><br>
             </fieldset>
 
             <!-- city -->
             <fieldset>
                 <legend>City:</legend>
-                <select name="city-select" id="city-select">
+                <select name="city-select" id="city-select" class="main-search-input" style="width: 5.5em;">
                     <option value="Tokio">Tokio</option>
                     <option value="Kyoto" selected>Kyoto</option>
                     <option value="Osaka">Osaka</option>

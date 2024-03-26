@@ -41,7 +41,7 @@
         <form id="nav-search-form">
             <input type="text" class="nav-search-inp">
             <button class="nav-search-button" type="submit">
-                <img class="loupe-btn-img" src="./images/loupe-30.png" alt="loupe" border="0" />
+                <img class="loupe-btn-img" src="./images/loupe-30.png" alt="loupe" />
             </button>
         </form>
     </nav>
@@ -87,6 +87,35 @@
                 <a href="#" class="car-link">More details</a>
             </div>
         </section>
+
+        <div class="table-container">
+            <table id="main-page-table">
+                <tr class="table-title">
+                    <th>Model</th>
+                    <th>Max Speed</th>
+                    <th>Engine Power</th>
+                    <th>Weight</th>
+                </tr>
+                <tr class="table-line">
+                    <td>Nissan GTR R34</td>
+                    <td>320 km/h</td>
+                    <td>280 hp</td>
+                    <td>1560 kg</td>
+                </tr>
+                <tr class="table-line">
+                    <td>Mazda RX7 FD</td>
+                    <td>250 km/h</td>
+                    <td>255 hp</td>
+                    <td>1280 kg</td>
+                </tr>
+                <tr class="table-line">
+                    <td>Toyota Supra MK5</td>
+                    <td>250 km/h</td>
+                    <td>340 hp</td>
+                    <td>1520 kg</td>
+                </tr>
+            </table>
+        </div>
 
     </div>
 
@@ -190,6 +219,12 @@
             <button type="submit" class="search-btn">Find</button>
         </form>
     </div>
+
+    <div class="feedback-form">
+        <label for="feedback-text">You got something to say?</label>
+        <textarea name="feedback-text" id="feedback-text" cols="30" rows="10"></textarea>
+        <button type="submit" class="feedback-btn">Submit</button>
+    </form>
 
 </body>
 </html>

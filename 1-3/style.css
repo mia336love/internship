@@ -1,9 +1,6 @@
 body {
     background: rgb(55, 55, 55);
     background: linear-gradient(162deg, rgb(19, 19, 19) 0%, rgb(41, 41, 41) 50%, rgb(72, 72, 72) 100%);
-
-    
-
 }
 
 #main-logo {
@@ -11,7 +8,6 @@ body {
 
     position: relative;
     left: 5em;
-    /* top: 1.4em; */
 }
 
 /* navigation */
@@ -19,9 +15,7 @@ body {
 #main-navigation {
     display: flex;
     flex-direction: row;
-
     justify-content: space-around;
-    
 }
 
 .main-nav-list {
@@ -29,7 +23,7 @@ body {
     justify-content: space-around;
     width: 11em;
 
-    filter: invert(1);
+    color: white;
 
     font-size: 3em;
     list-style-type: none;
@@ -42,17 +36,12 @@ body {
 
 #nav-search-form {
     position: relative;
-    right: 7em;
     top: 3.4em;
-
     justify-content: space-between;
 }
 
 .main-nav-list li:hover {
-    color: rgb(73, 225, 255);
-    /* filter: inherit(); */
-    /* border-bottom: 3px solid rgb(233, 233, 233); */
-
+    color: rgb(182,30,0);
 }
 
 /* =================================================================== */
@@ -61,9 +50,7 @@ body {
 .car-section-main {
     display: flex;
     flex-direction: column;
-
     padding-top: 2em;
-    /* padding-bottom: 5em; */
 }
 
 .main-page-title {
@@ -73,7 +60,7 @@ body {
     font-weight: 600;
     font-style: normal;
 
-    filter: invert();
+    color: white;
     text-align: center;
 }
 
@@ -91,41 +78,23 @@ body {
     align-self: center;
     position: relative;
     left: 10em;
-    /* align-items: flex-end; */
 }
-
-/* #car3 {
-    align-self: center;
-    position: relative;
-    right: 20em;
-
-} */
-
 
 .car-text {
     font-size: 1.7em;
-
     padding: 2em;
-    /* padding-top: 2em; */
-    /* padding-bottom: 10em; */
-
     mix-blend-mode: difference;
 }
 
 .car-image {
     height: 30em;
     border-radius: 10px;
-
     mix-blend-mode: difference; /* делает менее контрастным, мб оставить */
 }
 
 .car-title {
     font-size: 1.7em;
-    filter: invert(1);  /* для значения color у этого блока */
-    /* font-family: "Eczar", serif;
-    font-optical-sizing: auto;
-    font-weight: 550;
-    font-style: normal; */
+    color: white;
 
     font-family: "Mohave", sans-serif;
     font-optical-sizing: auto;
@@ -138,7 +107,7 @@ body {
     font-size: 80%;
     display: inline-block;
     width: 20em;
-    filter: invert(1);
+    color: white;
 
     font-family: "Khula", sans-serif;
     font-weight: 400;
@@ -149,7 +118,7 @@ body {
     display: flex;
     font-size: 110%;
     color: inherit;
-    filter: invert(1);
+    color: white;
     /* text-decoration: none; */
 
     font-family: "Khula", sans-serif;
@@ -157,16 +126,7 @@ body {
     font-style: normal;
 }
 
-/* .car-button {
-    width: 20em;
-    height: 5em;
-    border: none;
-    background-color: inherit;
-    justify-content: space-between;
-} */
-
 .car-button img {
-    /* width: 20em; */
     height: 5em;
 }
 
@@ -193,9 +153,6 @@ body {
     height: 2em;
 
     filter: invert();
-    /* border-style: none; */
-
-    /* fill: white; */
 }
 
 .nav-search-inp {
@@ -230,12 +187,11 @@ body {
     margin: auto;
 
     width: 60em;
-
-    
+    margin-bottom: 5%;
 }
 
 .main-page-search label, legend {
-    filter: invert();
+    color: white;
 
     font-family: "Khula", sans-serif;
     font-weight: 400;
@@ -251,7 +207,7 @@ body {
 }
 
 .search-form-title {
-    filter: invert();
+    color: white;
 
     font-family: "Mohave", sans-serif;
     font-optical-sizing: auto;
@@ -263,16 +219,11 @@ body {
 
 .search-cars-form {
     /* border: 1px solid white; */
-    width: min;
-
     box-sizing: border-box;
     padding: 50px;
 }
 
 .search-event-form {
-    /* border: 1px solid white; */
-    width: min;
-
     box-sizing: border-box;
     padding: 50px;
 }
@@ -338,13 +289,146 @@ input[type="range"]::-webkit-slider-thumb:hover {
     font-style: normal;
 
     padding-left: 1em;
-
+    
+    border-radius: 7px;
     border-style: none;
     outline:none;
-
-    border-radius: 7px;
 }
 
-#city-select {
+/* table */
 
+.table-container {
+    display: flex;
+    justify-content: center;
+}
+
+#main-page-table {
+    color: white;
+    /* border: 1px solid white; */
+    display: flex;
+}
+
+#main-page-table th, td {
+    width: 10em;
+}
+
+#main-page-table td {
+    border-bottom:1px solid white;
+}
+
+.table-title {
+    font-size: 1.8em;
+    font-family: "Mohave", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    border: 1px solid white;
+
+    background-color: rgb(182,30,0);
+}
+
+.table-line {
+    font-size: 1.2em;
+    font-family: "Khula", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: 1px solid white;
+}
+
+/* table, th, td {
+    border:1px solid white;
+  } */
+/* 
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+
+} */
+
+.feedback-form label {
+    font-size: 1.8em;
+    font-family: "Mohave", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+
+    display: block;
+    margin: 0 auto;
+}
+
+/* 
+#feedback-text {
+    height: 5em;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: #ffffff;
+
+    display: block;
+    margin: 0 auto;
+
+    font-size: 1.2em;
+    font-family: "Khula", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.feedback-btn {
+    display: block;
+    margin: 0 auto;
+    height: 10vh;
+
+    border-radius: 5px;
+    background-color: rgb(182,30,0);
+    color: rgb(239, 239, 239);
+    border-style: none;
+
+    font-family: "Khula", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5em;
+} */
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    /* width: 50%; */
+    width: 55em;
+    margin: 0 auto;
+
+}
+
+#feedback-text {
+    font-size: 1.2em;
+    font-family: "Khula", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+    padding: 10px 15px;
+
+    height: 20vh;
+}
+
+
+.feedback-btn {
+    font-family: "Khula", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5em;
+
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    /* border-radius: 5px; */
+    background-color: rgb(182,30,0);
+    color: rgb(239, 239, 239);
+    border-style: none;
 }

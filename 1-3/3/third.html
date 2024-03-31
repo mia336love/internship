@@ -24,8 +24,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&family=Khula:wght@300;400;600;700;800&family=Mohave:ital,wght@0,300..700;1,300..700&family=Sofadi+One&display=swap" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="third.css">
+    <!-- <link rel="stylesheet" href="third.css"> -->
+    <link rel="stylesheet" media="screen and (min-width: 1280px)" href="third.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
 
 </head>
 <body>
@@ -125,113 +126,117 @@
             </table>
         </div>
         
-        <div class="main-page-search">
+        <div class="forms-area">
 
-          <h2 class="main-page-title">= SEARCH =</h2>
+            <div class="main-page-search">
+
+            <h2 class="main-page-title">= SEARCH =</h2>
 
 
-            <form class="search-cars-form">
-                <h3 class="search-form-title">Cars</h3>
+                <form class="search-cars-form">
+                    <h3 class="search-form-title">Cars</h3>
 
-                    <!-- year -->
+                        <!-- year -->
+                        <fieldset>
+                            <legend>Year:</legend>
+                            <input type="number" class="main-search-input" name="search-cars-year" id="search-cars-year" style="width: 4em; padding-left: 1.5em;" min="1950" max="2050"><br>
+                        </fieldset>
+
+                        <!-- mark -->
+                        <fieldset>
+                            <legend>Mark:</legend>
+                            <input type="checkbox" id="mark1" name="mark" value="Nissan">
+                            <label for="mark1">Nissan</label>
+
+                            <input type="checkbox" id="mark2" name="mark" value="Mazda">
+                            <label for="mark2">Mazda</label>
+
+                            <input type="checkbox" id="mark3" name="mark" value="Toyota">
+                            <label for="mark3">Toyota</label><br>
+
+                            <input type="checkbox" id="mark4" name="mark" value="Subaru">
+                            <label for="mark4">Subaru</label>
+
+                            <input type="checkbox" id="mark5" name="mark" value="Honda">
+                            <label for="mark5">Honda</label>
+
+                            <input type="checkbox" id="mark6" name="mark" value="Mitsubishi">
+                            <label for="mark6">Mitsubishi</label><br>
+                        </fieldset>
+                        
+                        <!-- engine power -->
+                        <fieldset>
+                            <legend>Engine power:</legend>
+                            <input type="range" id="engine-power-range"><br>
+                        </fieldset>
+
+                        <button type="submit" class="search-btn" style="width: 100%;">Find</button>
+
+                </form>
+
+                <form class="search-event-form">
+                    <h3 class="search-form-title">Events</h3>
+
+                    <!-- key words -->
                     <fieldset>
-                        <legend>Year:</legend>
-                        <input type="number" class="main-search-input" name="search-cars-year" id="search-cars-year" style="width: 4em; padding-left: 1.5em;" min="1950" max="2050"><br>
-                    </fieldset>
-
-                    <!-- mark -->
-                    <fieldset>
-                        <legend>Mark:</legend>
-                        <input type="checkbox" id="mark1" name="mark" value="Nissan">
-                        <label for="mark1">Nissan</label>
-
-                        <input type="checkbox" id="mark2" name="mark" value="Mazda">
-                        <label for="mark2">Mazda</label>
-
-                        <input type="checkbox" id="mark3" name="mark" value="Toyota">
-                        <label for="mark3">Toyota</label><br>
-
-                        <input type="checkbox" id="mark4" name="mark" value="Subaru">
-                        <label for="mark4">Subaru</label>
-
-                        <input type="checkbox" id="mark5" name="mark" value="Honda">
-                        <label for="mark5">Honda</label>
-
-                        <input type="checkbox" id="mark6" name="mark" value="Mitsubishi">
-                        <label for="mark6">Mitsubishi</label><br>
+                        <legend>Key words:</legend>
+                        <input type="text" class="main-search-input" id="search-event-key-words" style="padding-left: 0.6em; width: 95%;"><br>
                     </fieldset>
                     
-                    <!-- engine power -->
+                    <!-- date -->
                     <fieldset>
-                        <legend>Engine power:</legend>
-                        <input type="range" id="engine-power-range"><br>
+                        <legend>Date:</legend>
+                        <input type="date" class="main-search-input" id="search-event-date" style="width: 53%;"><br>
                     </fieldset>
 
-                    <button type="submit" class="search-btn" style="width: 100%;">Find</button>
+                    <!-- city -->
+                    <fieldset>
+                        <legend>City:</legend>
+                        <select name="city-select" id="city-select" class="main-search-input" style="width: 5.5em;">
+                            <option value="Tokio">Tokio</option>
+                            <option value="Kyoto" selected>Kyoto</option>
+                            <option value="Osaka">Osaka</option>
+                            <option value="Nara">Nara</option>
+                        </select>
+                    </fieldset>
 
-            </form>
+                    <!-- price -->
+                    <fieldset>
+                        <legend>Price:</legend>
+                        <input type="radio" id="low-price" name="price" value="low-price">
+                        <label for="low-price">$</label>
 
-            <form class="search-event-form">
-                <h3 class="search-form-title">Events</h3>
+                        <input type="radio" id="average-price" name="price" value="average-price">
+                        <label for="age2">$$</label>
+                        
+                        <input type="radio" id="high-price" name="price" value="high-price">
+                        <label for="high-price">$$$</label><br>
+                    </fieldset>
 
-                <!-- key words -->
-                <fieldset>
-                    <legend>Key words:</legend>
-                    <input type="text" class="main-search-input" id="search-event-key-words" style="padding-left: 0.6em; width: 95%;"><br>
-                </fieldset>
-                
-                <!-- date -->
-                <fieldset>
-                    <legend>Date:</legend>
-                    <input type="date" class="main-search-input" id="search-event-date" style="width: 53%;"><br>
-                </fieldset>
+                    <!-- type -->
+                    <fieldset>
+                        <legend>Type:</legend>
+                        <input type="checkbox" id="type1" name="type" value="concert">
+                        <label for="type1">concert</label>
 
-                <!-- city -->
-                <fieldset>
-                    <legend>City:</legend>
-                    <select name="city-select" id="city-select" class="main-search-input" style="width: 5.5em;">
-                        <option value="Tokio">Tokio</option>
-                        <option value="Kyoto" selected>Kyoto</option>
-                        <option value="Osaka">Osaka</option>
-                        <option value="Nara">Nara</option>
-                    </select>
-                </fieldset>
+                        <input type="checkbox" id="type2" name="type" value="exhibition">
+                        <label for="type2">exhibition</label>
 
-                <!-- price -->
-                <fieldset>
-                    <legend>Price:</legend>
-                    <input type="radio" id="low-price" name="price" value="low-price">
-                    <label for="low-price">$</label>
+                        <input type="checkbox" id="type3" name="type" value="race">
+                        <label for="type3">race</label><br>
+                    </fieldset>
 
-                    <input type="radio" id="average-price" name="price" value="average-price">
-                    <label for="age2">$$</label>
-                    
-                    <input type="radio" id="high-price" name="price" value="high-price">
-                    <label for="high-price">$$$</label><br>
-                </fieldset>
+                    <button type="submit" class="search-btn">Find</button>
+                </form>
+            </div>
 
-                <!-- type -->
-                <fieldset>
-                    <legend>Type:</legend>
-                    <input type="checkbox" id="type1" name="type" value="concert">
-                    <label for="type1">concert</label>
-
-                    <input type="checkbox" id="type2" name="type" value="exhibition">
-                    <label for="type2">exhibition</label>
-
-                    <input type="checkbox" id="type3" name="type" value="race">
-                    <label for="type3">race</label><br>
-                </fieldset>
-
-                <button type="submit" class="search-btn">Find</button>
-            </form>
+            <div class="feedback-form">
+                <label for="feedback-text">You got something to say?</label>
+                <textarea name="feedback-text" id="feedback-text" cols="30" rows="10"></textarea>
+                <button type="submit" class="feedback-btn">Submit</button>
+            </div>
         </div>
 
-        <div class="feedback-form">
-            <label for="feedback-text">You got something to say?</label>
-            <textarea name="feedback-text" id="feedback-text" cols="30" rows="10"></textarea>
-            <button type="submit" class="feedback-btn">Submit</button>
-        </div>
     </div>
 </body>
 </html>

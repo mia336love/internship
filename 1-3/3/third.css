@@ -1,132 +1,130 @@
-.all-content {
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto; */
+/* @media screen and (max-width: 1280px) { */
+    .all-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-rows: repeat(3, auto); */
+        grid-template-areas:
+        "table table header"
+        "car1 forms header"
+        "car2 forms header"
+        "car3 forms header";
+        grid-gap: 10px;
+    }
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    .car-section {
+        border: 2px solid black;
+    }
 
-    grid-template-areas:
-    "table table header"
-    "car1 search header"
-    "car2 search header"
-    "car3 feedback header";
-    grid-gap: 10px;
-}
+    .car1 {
+        grid-area: car1;
+    }
 
-.car-section-main {
-    /* display: grid; */
-    /* grid-template-rows: repeat(3, 1fr); */
-}
+    .car2 {
+        grid-area: car2;
+    }
 
-.car-section {
-    border: 2px solid black;
-    /* width: 50%; */
-}
+    .car3 {
+        grid-area: car3;
+    }
 
-.car1 {
-    grid-area: car1;
-}
-
-.car2 {
-    grid-area: car2;
-}
-
-.car3 {
-    grid-area: car3;
-}
-
-#main-navigation {
-    grid-area: header;
-    display: grid;
-    /* justify-self: center; */
-    border: 2px solid black;
-}
+    #main-navigation {
+        grid-area: header;
+        display: grid;
+        /* justify-self: center; */
+        border: 2px solid black;
+    }
 
 
-.main-nav-list {
-    /* display: flex;
-    justify-content: space-around;
-    width: 11em; */
+    .main-nav-list {
+        /* display: flex;
+        justify-content: space-around;
+        width: 11em; */
 
-    display: grid;
+        display: grid;
 
-    font-size: 3em;
-    font-family: "Mohave", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-    list-style-type: none;
-}
+        font-size: 3em;
+        font-family: "Mohave", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        list-style-type: none;
+    }
 
-#nav-search-form {
-    position: relative;
-    top: 3.4em;
-    justify-content: space-between;
-}
+    #nav-search-form {
+        position: relative;
+        top: 3.4em;
+        justify-content: space-between;
+    }
 
-.main-nav-list li:hover {
-    color: rgb(182,30,0);
-}
+    .main-nav-list li:hover {
+        color: rgb(182,30,0);
+    }
 
-.main-page-search {
-    grid-area: search;
-    border: 2px solid black;
+    .forms-area {
+        grid-area: forms;
+        border: 2px solid black;
 
-    height: 1500px;
-}
+        /* height: 15000px; */
+    }
 
-.feedback-form {
-    grid-area: feedback;
-    
-}
+    /* .feedback-form {
+        grid-area: feedback;
+    } */
 
-.table-container {
-    grid-area: table;
-} 
+    .table-container {
+        grid-area: table;
+        border: 2px solid black;
+    } 
 
-#main-logo {
-    height: 7em;
-}
+    #main-logo {
+        height: 7em;
+    }
 
 
-.car-text {
-    font-size: 1.2em;
-    /* padding: 2em; */
-    mix-blend-mode: difference;
-}
+    .car-text {
+        font-size: 1.2em;
+        /* padding: 2em; */
+        mix-blend-mode: difference;
+    }
 
-.car-image {
-    height: 30em;
-    border-radius: 10px;
-    mix-blend-mode: difference;
-}
+    .car-image {
+        height: 30em;
+        border-radius: 10px;
+        mix-blend-mode: difference;
+    }
 
-.car-title {
-    font-size: 1em;
+    .car-title {
+        font-size: 1em;
 
-    font-family: "Mohave", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
+        font-family: "Mohave", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+    }
 
-}
+    .car-description {
+        /* font-size: 80%; */
+        display: inline-block;
+        width: 20em;
 
-.car-description {
-    /* font-size: 80%; */
-    display: inline-block;
-    width: 20em;
+        font-family: "Khula", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
 
-    font-family: "Khula", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
+    .car-link {
+        display: flex;
+        /* font-size: 110%; */
+        color: inherit;
+        font-family: "Khula", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
 
-.car-link {
-    display: flex;
-    /* font-size: 110%; */
-    color: inherit;
-    font-family: "Khula", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-}
+/* } */
+
+@media screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }

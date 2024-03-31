@@ -1,0 +1,132 @@
+.all-content {
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto; */
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-areas:
+    "table table header"
+    "car1 search header"
+    "car2 search header"
+    "car3 feedback header";
+    grid-gap: 10px;
+}
+
+.car-section-main {
+    /* display: grid; */
+    /* grid-template-rows: repeat(3, 1fr); */
+}
+
+.car-section {
+    border: 2px solid black;
+    /* width: 50%; */
+}
+
+.car1 {
+    grid-area: car1;
+}
+
+.car2 {
+    grid-area: car2;
+}
+
+.car3 {
+    grid-area: car3;
+}
+
+#main-navigation {
+    grid-area: header;
+    display: grid;
+    /* justify-self: center; */
+    border: 2px solid black;
+}
+
+
+.main-nav-list {
+    /* display: flex;
+    justify-content: space-around;
+    width: 11em; */
+
+    display: grid;
+
+    font-size: 3em;
+    font-family: "Mohave", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    list-style-type: none;
+}
+
+#nav-search-form {
+    position: relative;
+    top: 3.4em;
+    justify-content: space-between;
+}
+
+.main-nav-list li:hover {
+    color: rgb(182,30,0);
+}
+
+.main-page-search {
+    grid-area: search;
+    border: 2px solid black;
+
+    height: 1500px;
+}
+
+.feedback-form {
+    grid-area: feedback;
+    
+}
+
+.table-container {
+    grid-area: table;
+} 
+
+#main-logo {
+    height: 7em;
+}
+
+
+.car-text {
+    font-size: 1.2em;
+    /* padding: 2em; */
+    mix-blend-mode: difference;
+}
+
+.car-image {
+    height: 30em;
+    border-radius: 10px;
+    mix-blend-mode: difference;
+}
+
+.car-title {
+    font-size: 1em;
+
+    font-family: "Mohave", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+.car-description {
+    /* font-size: 80%; */
+    display: inline-block;
+    width: 20em;
+
+    font-family: "Khula", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.car-link {
+    display: flex;
+    /* font-size: 110%; */
+    color: inherit;
+    font-family: "Khula", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}

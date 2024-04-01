@@ -3,34 +3,38 @@
     grid-template-columns: repeat(3, 1fr);
     /* grid-template-rows: 15em auto auto auto; */
     grid-gap: 10px;
+
+    grid-template-areas:
+        "table table ."
+        "cars forms ."
+        "cars forms ."
+        "cars forms .";
 }
 
 .table-container {
+    grid-area: table;
     border: 2px solid red;
-
-    display: grid;
-    grid-column: 1/3;
-    /* grid-row: 1/2; */
-    grid-row-start: 1;
 }
 
 .forms-area {
+    grid-area: forms;
     border: 2px solid pink;
-    grid-column: 2/3;
-    grid-row: 2/3;
 }
 
 #main-navigation {
-    grid-template-columns: repeat(4, 1fr);
     border: 2px solid yellow;
-    grid-column: 3/4;
-    grid-row: 1 / -1;
-    position: sticky;
+
+    position: fixed;
+    right: 0;
     top: 0;
+
+    height: 100%;
+    width: 32.7%;
 }
 
 .car-section-main {
     display: grid;
+    grid-area: cars;
 
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
@@ -41,9 +45,20 @@
     border: 2px solid greenyellow;
 }
 
-.main-nav-list {
-    display: grid;
+/* .car1 {
+    grid-area: car1;
+}
 
+.car2 {
+    grid-area: car2;
+}
+
+.car3 {
+    grid-area: car3;
+} */
+
+
+.main-nav-list {
     font-size: 3em;
     font-family: "Mohave", sans-serif;
     font-optical-sizing: auto;

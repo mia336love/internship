@@ -1,0 +1,103 @@
+
+.all-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "header header header"
+    "table table table"
+    "car1 car2 car3"
+    "forms forms forms";
+    grid-gap: 10px;
+}
+
+.car-section {
+    border: 2px solid black;
+}
+
+.car1 {
+    grid-area: car1;
+}
+
+.car2 {
+    grid-area: car2;
+}
+
+.car3 {
+    grid-area: car3;
+}
+
+#main-navigation {
+    grid-area: header;
+    display: grid;
+    border: 2px solid black;
+}
+
+
+.main-nav-list {
+    display: grid;
+
+    font-size: 3em;
+    font-family: "Mohave", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    list-style-type: none;
+}
+
+#nav-search-form {
+    position: relative;
+    top: 3.4em;
+    justify-content: space-between;
+}
+
+.main-nav-list li:hover {
+    color: rgb(182,30,0);
+}
+
+.forms-area {
+    grid-area: forms;
+    border: 2px solid black;
+}
+
+.table-container {
+    grid-area: table;
+    border: 2px solid black;
+}
+
+#main-logo {
+    height: 7em;
+}
+
+.car-text {
+    font-size: 1.2em;
+    /* padding: 2em; */
+    mix-blend-mode: difference;
+}
+
+.car-image {
+    width: 10em;
+    border-radius: 10px;
+    mix-blend-mode: difference;
+}
+.car-title {
+    font-size: 1em;
+    font-family: "Mohave", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.car-description {
+    display: inline-block;
+    width: 20em;
+    font-family: "Khula", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.car-link {
+    display: flex;
+    /* font-size: 110%; */
+    color: inherit;
+    font-family: "Khula", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}

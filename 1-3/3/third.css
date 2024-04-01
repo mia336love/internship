@@ -36,10 +36,6 @@
 
 
     .main-nav-list {
-        /* display: flex;
-        justify-content: space-around;
-        width: 11em; */
-
         display: grid;
 
         font-size: 3em;
@@ -63,13 +59,7 @@
     .forms-area {
         grid-area: forms;
         border: 2px solid black;
-
-        /* height: 15000px; */
     }
-
-    /* .feedback-form {
-        grid-area: feedback;
-    } */
 
     .table-container {
         grid-area: table;
@@ -83,7 +73,6 @@
 
     .car-text {
         font-size: 1.2em;
-        /* padding: 2em; */
         mix-blend-mode: difference;
     }
 
@@ -96,7 +85,6 @@
 
     .car-title {
         font-size: 1em;
-
         font-family: "Mohave", sans-serif;
         font-optical-sizing: auto;
         font-weight: 600;
@@ -104,7 +92,6 @@
     }
 
     .car-description {
-        /* font-size: 80%; */
         display: inline-block;
         width: 20em;
 
@@ -115,7 +102,6 @@
 
     .car-link {
         display: flex;
-        /* font-size: 110%; */
         color: inherit;
         font-family: "Khula", sans-serif;
         font-weight: 500;

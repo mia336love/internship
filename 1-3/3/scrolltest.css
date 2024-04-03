@@ -41,8 +41,10 @@
     display: grid;
     grid-area: cars;
 
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    @screen and (min-width: 1280px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
     grid-gap: 40px;
 }
 
@@ -57,12 +59,13 @@
     font-weight: 800;
     font-style: normal;
     list-style-type: none;
+    color: white;
 }
 
 #nav-search-form {
-    /* position: relative;
+    position: relative;
     top: 3.4em;
-    justify-content: space-between; */
+    justify-content: space-between;
 }
 
 .main-nav-list li:hover {

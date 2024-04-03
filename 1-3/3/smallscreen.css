@@ -1,103 +1,136 @@
-
 .all-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-    "header header header"
-    "table table table"
-    "car1 car2 car3"
-    "forms forms forms";
     grid-gap: 10px;
+
+    grid-template-areas:
+        "header header header"
+        "table table table"
+        "cars cars cars"
+        "forms forms forms";
+
+        /* background-color: black; */
 }
 
-.car-section {
-    border: 2px solid black;
+.table-container {
+    grid-area: table;
+    width: 100%;
+    border: 2px solid red;
 }
 
-.car1 {
-    grid-area: car1;
-}
-
-.car2 {
-    grid-area: car2;
-}
-
-.car3 {
-    grid-area: car3;
+.forms-area {
+    grid-area: forms;
+    border: 2px solid pink;
 }
 
 #main-navigation {
     grid-area: header;
-    display: grid;
-    border: 2px solid black;
+    /* border: 2px solid yellow; */
+
+    position: sticky;
+    top: 0;
+
+    background-color: black;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    border-bottom: 2px solid white;
 }
 
-
 .main-nav-list {
-    display: grid;
-
     font-size: 3em;
     font-family: "Mohave", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
     list-style-type: none;
-}
+    color: white;
 
-#nav-search-form {
-    position: relative;
-    top: 3.4em;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-around;
+    width: 11em;
 }
-
 .main-nav-list li:hover {
     color: rgb(182,30,0);
 }
 
-.forms-area {
-    grid-area: forms;
-    border: 2px solid black;
-}
+.car-section-main {
+    display: grid;
+    grid-area: cars;
 
-.table-container {
-    grid-area: table;
-    border: 2px solid black;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: 70%; */
+    grid-gap: 40px;
 }
 
 #main-logo {
     height: 7em;
 }
 
-.car-text {
-    font-size: 1.2em;
-    /* padding: 2em; */
-    mix-blend-mode: difference;
+.car-image {
+    width: 100%;
+    border-radius: 10px;
 }
 
-.car-image {
-    width: 10em;
-    border-radius: 10px;
-    mix-blend-mode: difference;
+.car-text {
+    font-size: 1.2em;
+    width: 100%;
+
+    /* padding: 4%; */
 }
+
 .car-title {
-    font-size: 1em;
+    /* font-size: 1em; */
     font-family: "Mohave", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
 }
+
 .car-description {
-    display: inline-block;
-    width: 20em;
+    font-size: 0.8em;
     font-family: "Khula", sans-serif;
     font-weight: 400;
     font-style: normal;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
+
 .car-link {
     display: flex;
-    /* font-size: 110%; */
     color: inherit;
     font-family: "Khula", sans-serif;
     font-weight: 500;
     font-style: normal;
+    font-size: 0.9em;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+}
+
+#main-page-table {
+    color: white;
+    display: flex;
+}
+
+#main-page-table th, td {
+    width: 10em;
+}
+
+#main-page-table td {
+    border-bottom:1px solid white;
+}
+
+.table-title {
+    font-size: 1.6em;
+}
+
+.table-line {
+    font-size: 1em;
 }

@@ -9,8 +9,6 @@
         "table table table"
         "cars cars cars"
         "forms forms forms";
-
-        /* background-color: black; */
 }
 
 .table-container {
@@ -26,13 +24,16 @@
 
 .nav-container {
     grid-area: header;
-    /* border: 2px solid yellow; */
-}
 
-#main-navigation {
     position: sticky;
     top: 0;
     width: 100%;
+}
+
+#main-navigation {
+    /* position: sticky;
+    top: 0;
+    width: 100%; */
 
     display: flex;
     flex-direction: row;

@@ -1,0 +1,80 @@
+.all-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 10px;
+
+  grid-template-areas:
+    "table table ."
+    "cars forms ."
+    "cars forms ."
+    "cars forms .";
+}
+
+.table-container {
+  grid-area: table;
+  /* border: 2px solid red; */
+}
+
+.forms-area {
+  grid-area: forms;
+  border: 2px solid pink;
+}
+
+#main-navigation {
+  border: 2px solid yellow;
+
+  position: fixed;
+  height: 100%;
+  width: 32.7%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.car-section-main {
+  display: grid;
+  grid-area: cars;
+  align-items: start;
+  height: auto;
+  grid-gap: 40px;
+}
+
+.car-section {
+  border: 2px solid greenyellow;
+  justify-self: center;
+  width: 50%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.car-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.car-description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-container {
+  position: relative;
+}
+
+.search-container {
+    margin-left: 8%;
+}
+
+#main-logo {
+  /* height: 100%; */
+  /* aspect-ratio: auto 16/9; */
+  margin-left: -7%;
+}
+
+.main-page-search {
+  display: flex;
+  flex-direction: column;
+}

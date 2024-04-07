@@ -7,20 +7,7 @@ body {
     box-sizing: border-box;
 }
 
-#main-logo {
-    /* height: 7em;
-
-    position: relative;
-    left: 5em; */
-}
-
 /* navigation */
-
-#main-navigation {
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-around; */
-}
 
 .main-nav-list {
     color: white;
@@ -251,7 +238,8 @@ input[type="range"]::-webkit-slider-thumb:hover {
 }
 
 #main-page-table th, td {
-    width: 10em;
+    /* width: 10em; */
+    width: 100em;
 }
 
 #main-page-table td {

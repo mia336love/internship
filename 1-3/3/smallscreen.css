@@ -1,9 +1,6 @@
 .all-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* grid-template-rows: auto auto auto; */
-  /* grid-gap: 10px; */
-
   grid-template-areas:
     "header header header"
     "table table table"
@@ -56,12 +53,15 @@
 
 .nav-container {
   grid-area: header;
-
   position: sticky;
   top: 0;
   width: 100%;
-
-  background-color: rgb(158, 26, 0);
+  background: rgb(50, 50, 50);
+  background: linear-gradient(
+    328deg,
+    rgb(41, 41, 41) 50%,
+    rgb(250, 250, 250) 100%
+  );
 }
 
 #main-navigation {
@@ -82,7 +82,7 @@
 }
 
 #main-logo {
-  height: 100%;
+  height: 80%;
 
   grid-column: 1/2;
   grid-row: 1/2;
@@ -262,6 +262,4 @@
   }
 } */
 
-
 /* animations */
-

@@ -22,13 +22,13 @@
 .car-section-main {
   display: grid;
   grid-area: cars;
-  align-items: start;
+  justify-items: center;
   height: auto;
-  grid-gap: 40px;
+  gap: 40px;
+  /* row-gap: 40px; */
 }
 
 .car-section {
-  justify-self: center;
   width: 50%;
   max-height: 100%;
   overflow: hidden;
@@ -63,4 +63,8 @@
 .main-page-search {
   display: flex;
   flex-direction: column;
+}
+
+.search-btn {
+    height: 10vh;
 }

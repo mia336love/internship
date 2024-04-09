@@ -13,12 +13,12 @@
 
 .table-container {
   grid-area: table;
-  animation: fromTop 5s forwards;
+  animation: fromTop 3s forwards;
 }
 
 .forms-area {
   grid-area: forms;
-  animation: fromLeft 5s forwards;
+  animation: fromLeft 3s forwards;
 }
 
 .car-section-main {
@@ -27,9 +27,8 @@
   justify-items: center;
   height: auto;
   gap: 40px;
-  /* row-gap: 40px; */
 
-  animation: fromLeft 5s forwards;
+  animation: fromLeft 3s forwards;
 }
 
 .car-section {
@@ -59,7 +58,7 @@
   justify-items: center;
 
   border-left: 2px solid white;
-  animation: fromRight 5s forwards;
+  animation: fromRight 3s forwards;
 }
 
 #main-logo {

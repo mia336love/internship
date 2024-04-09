@@ -21,3 +21,13 @@
         transform: translateX(-100%);
     }
 }
+
+@keyframes red-to-black {
+  from {
+    background-color: rgb(182, 30, 0);
+  }
+
+  to {
+    background-color: #515151;
+  }
+}

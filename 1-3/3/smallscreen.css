@@ -15,7 +15,6 @@
 
 .forms-area {
   grid-area: forms;
-  /* display: flex; */
 
   @media (max-width: 800px) {
     .main-page-search {
@@ -142,8 +141,6 @@
 .search-container {
   grid-column: 1/3;
   grid-row: 2/3;
-
-  /* justify-self: center; */
 }
 
 .main-nav-list {
@@ -241,25 +238,3 @@
     font-size: 0.6em;
   }
 }
-
-/* .feedback-btn {
-  animation-name: red-to-blue;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: ease-out;
-} */
-
-/* @keyframes red-to-blue {
-  from {
-    background-color: rgb(182, 30, 0);
-  }
-  50% {
-    background-color: #7f6edb;
-  }
-  to {
-    background-color: #2e9aff;
-  }
-} */
-
-/* animations */

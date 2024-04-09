@@ -48,7 +48,7 @@ body {
 
 .car-image {
   border-radius: 10px;
-  /* mix-blend-mode: difference; /* делает менее контрастным, мб оставить */
+  /* mix-blend-mode: difference; */
 }
 
 .car-title {
@@ -72,8 +72,6 @@ body {
   display: flex;
   font-size: 100%;
   color: inherit;
-  /* text-decoration: none; */
-
   font-family: "Khula", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -83,7 +81,6 @@ body {
 
 #nav-search-form {
   display: inline-flex;
-  /* height: 2.5em; */
 }
 
 .nav-search-button {
@@ -101,7 +98,6 @@ body {
 }
 
 .nav-search-inp {
-  /* width: 17em; */
   font-size: 1.6em;
   font-family: "Khula", sans-serif;
   font-weight: 400;
@@ -157,16 +153,6 @@ legend {
   font-size: 2.2em;
 }
 
-/* .search-cars-form {
-    box-sizing: border-box;
-    padding: 50px;
-}
-
-.search-event-form {
-    box-sizing: border-box;
-    padding: 50px;
-} */
-
 #engine-power-range::-webkit-slider-runnable-track {
   background-color: rgb(243, 243, 243);
   height: 0.88em;
@@ -192,10 +178,6 @@ input[type="range"]::-webkit-slider-thumb {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-
-  /* position: relative;
-  top: -0.26em; */
-
   margin-top: -0.266em;
 }
 
@@ -205,7 +187,6 @@ input[type="range"]::-webkit-slider-thumb:hover {
 
 .search-btn {
   width: 100%;
-  /* height: 10vh; */
   margin-top: 5%;
   border-radius: 5px;
 
@@ -217,6 +198,10 @@ input[type="range"]::-webkit-slider-thumb:hover {
   font-weight: 700;
   font-style: normal;
   font-size: 1.5em;
+}
+
+.search-btn:hover {
+  animation: red-to-black 4s infinite alternate;
 }
 
 .main-search-input {
@@ -241,7 +226,6 @@ input[type="range"]::-webkit-slider-thumb:hover {
 
 #main-page-table th,
 td {
-  /* width: 10em; */
   width: 100em;
 }
 
@@ -312,4 +296,8 @@ td {
   background-color: rgb(182, 30, 0);
   color: rgb(239, 239, 239);
   border-style: none;
+}
+
+.feedback-btn:hover {
+  animation: red-to-black 4s infinite alternate;
 }

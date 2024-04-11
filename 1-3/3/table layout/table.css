@@ -1,9 +1,3 @@
-table,
-th,
-td {
-  border: 1px solid white;
-}
-
 #main-logo {
   height: 8em;
 }
@@ -19,5 +13,9 @@ td {
 }
 
 .nav-container {
-    vertical-align: top;
+  vertical-align: top;
+}
+
+.feedback-form {
+  width: 60%;
 }

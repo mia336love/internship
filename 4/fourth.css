@@ -1,0 +1,36 @@
+.btn {
+  border: 1px solid black;
+}
+
+.operators {
+    grid-area: operators;
+
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    /* grid-template-columns: 100px; */
+}
+
+.numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-area: numbers;
+}
+
+/* .zero {
+    grid-column: 1/4;
+} */
+
+.ari-btns {
+    display: grid;
+
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(4, 100px);
+
+
+    grid-template-areas:
+    "numbers operators"
+    "numbers operators"
+    "numbers operators"
+    "numbers operators"
+}

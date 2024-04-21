@@ -11,53 +11,115 @@
 </head>
 
 <body>
-    <div class="arithmetic">
-        <div class="ari-result"></div>
-        <div class="ari-btns">
-            <div class="operators">
-                <button class="btn oper">÷</button>
-                <button class="btn oper">×</button>
-                <button class="btn oper">-</button>
-                <button class="btn oper">+</button>
+    <div class="all-content">
+        <div class="arithmetic">
+            <div class="ari-result"></div>
+            <div class="ari-btns">
+                <div class="operators">
+                    <button class="btn oper">÷</button>
+                    <button class="btn oper">×</button>
+                    <button class="btn oper">-</button>
+                    <button class="btn oper">+</button>
+                </div>
+
+                <div class="numbers">
+                    <button class="btn num seven">7</button>
+                    <button class="btn num eight">8</button>
+                    <button class="btn num nine">9</button>
+
+                    <button class="btn num four">4</button>
+                    <button class="btn num five">5</button>
+                    <button class="btn num six">6</button>
+
+                    <button class="btn num one">1</button>
+                    <button class="btn num two">2</button>
+                    <button class="btn num three">3</button>
+
+                    <button class="btn num zero">0</button>
+                    <button class="btn equals">=</button>
+                    <button class="btn dot">.</button>
+                </div>
+
             </div>
+        </div>
 
-            <div class="numbers">
-                <button class="btn num seven">7</button>
-                <button class="btn num eight">8</button>
-                <button class="btn num nine">9</button>
+        <div class="strings">
+            <input type="text" class="str-inp" style="font-size: 1.2em;" placeholder="Напишите что-нибудь...">
+            <p class="str concatenation">Конкатенация</p>
+            <p class="str shielding"></p>
+            <p class="str templating">Шаблонизация</p>
+        </div>
 
-                <button class="btn num four">4</button>
-                <button class="btn num five">5</button>
-                <button class="btn num six">6</button>
+        <div class="events">
+            <img id="DKimage" src="https://i.pinimg.com/564x/0d/88/6c/0d886c0dfc717a4274f6aca99fdfdc8d.jpg"
+                alt="daiki-taiga" style="width: 25em; height: 25em;">
+            <!-- <p id="evClick">Нажми на меня</p> -->
 
-                <button class="btn num one">1</button>
-                <button class="btn num two">2</button>
-                <button class="btn num three">3</button>
-
-                <button class="btn num zero">0</button>
-                <button class="btn equals">=</button>
-                <button class="btn dot">.</button>
+            <div class="miracles">
+                <div class="miraclesMenu"></div>
+                <div class="miraclesInfo"><i>Click on player</i></div>
             </div>
-
         </div>
     </div>
 
-    <div class="strings">
-        <input type="text" class="str-inp" placeholder="Enter something...">
 
-        <button id="btn">log</button>
+    <script type="module">
+        // наведение мыши
+        const DKimage = document.getElementById('DKimage')
 
-        <p class="str concatenation">Конкатенация</p>
-        <p class="str shielding"></p>
-        <p class="str templating">Шаблонизация</p>
-    </div>
+        DKimage.addEventListener('mouseenter', () => {
+            DKimage.src = 'https://i.pinimg.com/564x/c5/af/5c/c5af5c8c17eeb06e712798b0a1a9beae.jpg'
+        })
 
-    <script>
-        // let logName = (event) => {
-        //     let name = event.target.textContent;
+        DKimage.addEventListener('mouseleave', () => {
+            DKimage.src = 'https://i.pinimg.com/564x/0d/88/6c/0d886c0dfc717a4274f6aca99fdfdc8d.jpg'
+        })
 
-        //     console.log(name);
-        // }
+        // клик
+        import arr from './array.js';
+        const miraclesMenu = document.querySelector('.miraclesMenu')
+        const miraclesInfo = document.querySelector('.miraclesInfo')
+
+        arr.forEach(person => {
+            const pers = document.createElement('span')
+
+            pers.textContent = person.name
+            pers.classList.add('pers')
+            // pers.classList.add(person.id)
+
+            pers.id = person.id
+
+
+            pers.style.background = person.color
+
+            miraclesMenu.appendChild(pers)
+
+            pers.addEventListener('click', (event) => {
+                const targetId = event.target.id;
+                // console.log(targetId);
+
+                if (targetId === person.id) {
+                    // console.log(person.position, person.team);
+                    miraclesInfo.innerHTML = `<b>Porition:</b> ${person.position} <br> <b>Special talent:</b> ${person.talent} <br> <b>Team:</b> ${person.team}`
+                }
+            });
+        });
+
+        // снятие курсора мыши с элемента
+
+        // фокус инпута
+        const strInp = document.querySelector('.str-inp')
+        strInp.onfocus = () => {
+            strInp.style.color = "red"
+            strInp.style.fontSize = "1.5em"
+        }
+
+        strInp.onblur = () => {
+            strInp.style.color = 'blue'
+            strInp.style.fontSize = "1.2em"
+        }
+
+        // изменение контента элемента
     </script>
 </body>
 

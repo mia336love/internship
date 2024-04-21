@@ -13,12 +13,10 @@ calculator.addEventListener('click', (event) => {
     if (event.target.classList.contains('num')) {
         if (operator === '') {
             num1 += event.target.textContent
-            // calcDisplay.innerHTML += num1
             calcDisplayUpdate()
 
-        } else if (operator !== '') {
+        } else if (operator !== '' && num1 !== '') {
             num2 += event.target.textContent
-            // calcDisplay.innerHTML += num2
             calcDisplayUpdate()
 
         }
@@ -28,29 +26,25 @@ calculator.addEventListener('click', (event) => {
             decimalAdded = true;
             if (operator === '') {
                 num1 += dot;
-                // calcDisplay.innerHTML += dot
                 calcDisplayUpdate()
 
             } else if (operator !== '') {
                 num2 += dot;
-                // calcDisplay.innerHTML += dot
                 calcDisplayUpdate()
 
             }
         }
-    } else if (event.target.classList.contains('oper')) {
+    } else if (event.target.classList.contains('oper') && num1 !== '') {
         operator = event.target.textContent
         decimalAdded = false;
 
-        // calcDisplay.innerHTML += operator
-
     } else if (event.target.classList.contains('equals')) {
-        const result = calculate(num1, operator, num2)
+        const result = (num1 !== '' && operator !== '' && num2 !== '') ? calculate(num1, operator, num2) : 'Ошибка ввода'
+
         clearInput()
         calcDisplay.innerHTML = result
     }
     console.log(num1, operator, num2);
-
 })
 
 const calcDisplayUpdate = (res) => {
@@ -109,7 +103,7 @@ userText.addEventListener('input', () => {
 
 // 2. экранирование
 const shielding = document.querySelector('.shielding')
-let message = '\'Cлэши не видно, а они есть\'';
+let message = '\'Cлэши не видны, а они есть\'';
 shielding.innerHTML = message
 
 // 3. шаблонизация

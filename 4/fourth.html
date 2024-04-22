@@ -44,7 +44,8 @@
         </div>
 
         <div class="strings">
-            <input type="text" class="str-inp" style="font-size: 1.2em;" placeholder="Напишите что-нибудь...">
+            <input type="text" class="str-inp" style="font-size: 1.2em;" onchange="console.log(this.value)"
+                placeholder="Напишите что-нибудь...">
             <p class="str concatenation">Конкатенация</p>
             <p class="str shielding"></p>
             <p class="str templating">Шаблонизация</p>
@@ -85,27 +86,28 @@
 
             pers.textContent = person.name
             pers.classList.add('pers')
-            // pers.classList.add(person.id)
-
             pers.id = person.id
-
-
             pers.style.background = person.color
 
-            miraclesMenu.appendChild(pers)
 
-            pers.addEventListener('click', (event) => {
+            miraclesMenu.append(pers)
+
+            // ф-ция, производящая действие и подключенная
+            function displayInfo(event) {
+
+                // предотвращение работы события
+                event.preventDefault()
+
                 const targetId = event.target.id;
-                // console.log(targetId);
 
                 if (targetId === person.id) {
-                    // console.log(person.position, person.team);
                     miraclesInfo.innerHTML = `<b>Porition:</b> ${person.position} <br> <b>Special talent:</b> ${person.talent} <br> <b>Team:</b> ${person.team}`
                 }
-            });
+            }
+
+            pers.addEventListener('click', displayInfo);
         });
 
-        // снятие курсора мыши с элемента
 
         // фокус инпута
         const strInp = document.querySelector('.str-inp')
@@ -114,12 +116,14 @@
             strInp.style.fontSize = "1.5em"
         }
 
+        // снятие курсора мыши с элемента
         strInp.onblur = () => {
             strInp.style.color = 'blue'
             strInp.style.fontSize = "1.2em"
         }
 
         // изменение контента элемента
+        // onchange в input
     </script>
 </body>
 

@@ -78,3 +78,38 @@ document.getElementById('readerButton').addEventListener('click', (event) => {
 
     becomeReader(name, email, password)
 })
+
+// LOG IN
+
+const login = (name, email, password) => {
+    for (let user of users) {
+        if (user.name === name && user.email === email && user.password === password) {
+            console.log('пользователь существует');
+            return
+        }
+    }
+    console.log('пользователь не существует');
+}
+
+document.getElementById('loginButton').addEventListener('click', (event) => {
+    event.preventDefault();
+
+    let name = document.getElementById('logName').value
+    let email = document.getElementById('logEmail').value
+    let password = document.getElementById('logPassword').value
+
+    login(name, email, password)
+})
+
+
+
+
+
+// window.location.replace('https')
+
+
+// if (user instanceof Author) {
+//     console.log('User is an Author');
+// } else if (user instanceof Reader) {
+//     console.log('User is a Reader');
+// }

@@ -14,11 +14,9 @@ calculator.addEventListener('click', (event) => {
         if (operator === '') {
             num1 += event.target.textContent
             calcDisplayUpdate()
-
         } else if (operator !== '' && num1 !== '') {
             num2 += event.target.textContent
             calcDisplayUpdate()
-
         }
     } else if (event.target.classList.contains('dot')) {
         if (!decimalAdded && (num1 !== '' || num2 !== '')) {
@@ -27,11 +25,9 @@ calculator.addEventListener('click', (event) => {
             if (operator === '') {
                 num1 += dot;
                 calcDisplayUpdate()
-
             } else if (operator !== '') {
                 num2 += dot;
                 calcDisplayUpdate()
-
             }
         }
     } else if (event.target.classList.contains('oper') && num1 !== '') {

@@ -1,14 +1,3 @@
-// https://metanit.com/web/javascript/4.12.php
-
-// class Person{}
-
-// const tom = new Person();
-// const bob = new Person();
-
-// console.log(tom);
-// console.log(bob);
-//----------------------------------------------------
-
 class User {
     constructor(options) {
         this.name = options.name
@@ -24,14 +13,12 @@ class User {
 class Author extends User {
     constructor(options) {
         super(options)  // данные как у User
-        // this.role = 'author'
     }
 }
 
 class Reader extends User {
     constructor(options) {
         super(options)  // данные как у User
-        // this.role = 'reader'
     }
 }
 
@@ -114,16 +101,3 @@ document.getElementById('loginButton').addEventListener('click', (event) => {
 
     login(name, email, password)
 })
-
-
-
-
-
-// window.location.replace('https')
-
-
-// if (user instanceof Author) {
-//     console.log('User is an Author');
-// } else if (user instanceof Reader) {
-//     console.log('User is a Reader');
-// }

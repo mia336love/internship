@@ -8,7 +8,6 @@ const personalPageBody = document.getElementById('personalPageBody')
 greetingMessage.innerHTML = `Hello, ${name}!`
 
 if (role === 'Author') {
-    console.log('Это — автор');
 
     personalPageBody.innerHTML = `
     <div class="author-dashboard">
@@ -21,7 +20,6 @@ if (role === 'Author') {
     </div>
     `
 } else if (role === 'Reader') {
-    console.log('Это читатель');
 
     personalPageBody.innerHTML = `
     <section class="stats">

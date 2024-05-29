@@ -1,8 +1,8 @@
 class User {
-    constructor(options) {
-        this.name = options.name
-        this.email = options.email
-        this.password = options.password
+    constructor({name , email, password}) {      // деструктуризация options
+        this.name = name
+        this.email = email
+        this.password = password
     }
 
     greet() {
@@ -11,14 +11,14 @@ class User {
 }
 
 class Author extends User {
-    constructor(options) {
-        super(options)  // данные как у User
+    constructor({name, email, password}) {
+        super({name, email, password})  // данные как у User
     }
 }
 
 class Reader extends User {
-    constructor(options) {
-        super(options)  // данные как у User
+    constructor({name, email, password}) {
+        super({name, email, password})  // данные как у User
     }
 }
 
@@ -33,7 +33,7 @@ const becomeAuthor = (name, email, password) => {
         password: password
     })
     users.push(newUser)
-    console.log('A new author has been registered');
+    console.log('Новый пользователь зарегестрирован');
 }
 
 const becomeReader = (name, email, password) => {
@@ -75,7 +75,7 @@ const login = (name, email, password) => {
             let role = user.constructor.name
             let name = user.name
 
-            console.log('пользователь существует');
+            console.log('Пользователь существует');
             
 
             localStorage.setItem('userRole', role)
@@ -87,7 +87,7 @@ const login = (name, email, password) => {
 
 
         } else {
-            console.log('пользователь не существует')
+            console.log('Пользователя не существует')
         }
     }
 }

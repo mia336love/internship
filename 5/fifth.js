@@ -84,11 +84,25 @@ document.getElementById('readerButton').addEventListener('click', (event) => {
 const login = (name, email, password) => {
     for (let user of users) {
         if (user.name === name && user.email === email && user.password === password) {
+
+            let role = user.constructor.name
+            let name = user.name
+
             console.log('пользователь существует');
+            
+
+            localStorage.setItem('userRole', role)
+            localStorage.setItem('userName', name)
+
+            window.location.replace('./personalPage.html')
+
             return
+
+
+        } else {
+            console.log('пользователь не существует')
         }
     }
-    console.log('пользователь не существует');
 }
 
 document.getElementById('loginButton').addEventListener('click', (event) => {

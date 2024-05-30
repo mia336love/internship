@@ -3,6 +3,7 @@ const name = localStorage.getItem('userName')
 
 const greetingMessage = document.getElementById('greetingMessage')
 const personalPageBody = document.getElementById('personalPageBody')
+const logOutButton = document.querySelector('.logOutButton')
 
 
 greetingMessage.innerHTML = `Hello, ${name}!`
@@ -28,3 +29,8 @@ if (role === 'Author') {
     </section>
     `
 }
+
+logOutButton.addEventListener('click', () => {
+    localStorage.clear()
+    window.location.replace('./fifth.html')
+})

@@ -58,6 +58,10 @@ const renderGenresMenu = () => {
         let genreBtn = document.createElement('button');
         genreBtn.textContent = genre;
 
+        if (selectedGenres.includes(genre)) {
+            genreBtn.style.color = 'red';
+        }
+
         genresMenu.append(genreBtn);
 
         genreBtn.addEventListener('click', (event) => {
@@ -71,8 +75,12 @@ const renderGenresMenu = () => {
             }
 
             localStorage.setItem('authorGenres', JSON.stringify(selectedGenres));
+
+            if (selectedGenres.includes(targetName)) {
+                event.target.style.color = 'red';
+            }
         });
     });
 };
 
-selectGenresButton.addEventListener('click', renderGenresMenu)
+selectGenresButton.addEventListener('click', renderGenresMenu);

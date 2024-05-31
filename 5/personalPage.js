@@ -56,58 +56,51 @@ console.log(...genresArray);
 
 
 const renderGenresMenu = () => {
-    selectGenres.style.display = 'flex'
-
-    const selectedGenres = []
-
+    selectGenres.style.display = 'flex';
+    genresMenu.innerHTML = '';
+  
+    const selectedGenres = JSON.parse(localStorage.getItem('authorGenres')) || [];
+  
     genresArray.forEach(genre => {
-        let genreBtn = document.createElement('button')
-        genreBtn.textContent = genre
-
-        genresMenu.append(genreBtn)
-
-        genreBtn.addEventListener('click', (event) => {
-
-
-            const targetName = event.target.textContent
-
-            if (!selectedGenres.includes(targetName)) {
-                selectedGenres.push(targetName)
-                console.log(...selectedGenres);
-            } else {
-                console.log(`Жанр ${targetName} уже выбран`);
-            }
-
-            localStorage.setItem('authorGenres', JSON.stringify(selectedGenres));
-            // renderAuthorGenres();
-
-            console.log(selectedGenres);
-
-        return
-
-        })
-
-    })
-}
-
+      let genreBtn = document.createElement('button');
+      genreBtn.textContent = genre;
+  
+      genresMenu.append(genreBtn);
+  
+      genreBtn.addEventListener('click', (event) => {
+        const targetName = event.target.textContent;
+  
+        if (!selectedGenres.includes(targetName)) {
+          selectedGenres.push(targetName);
+          console.log(...selectedGenres);
+        } else {
+          console.log(`Жанр ${targetName} уже выбран`);
+        }
+  
+        localStorage.setItem('authorGenres', JSON.stringify(selectedGenres));
+        // renderAuthorGenres();
+      });
+    });
+  };
+  
 selectGenresButton.addEventListener('click', renderGenresMenu)
 
 
-const renderAuthorGenres = () => {
-    // const selectedGenres = localStorage.getItem('authorGenres')
+// const renderAuthorGenres = () => {
+//     // const selectedGenres = localStorage.getItem('authorGenres')
 
-    const selectedGenres = JSON.parse(localStorage.getItem('authorGenres')) || []
+//     const selectedGenres = JSON.parse(localStorage.getItem('authorGenres')) || []
 
 
-    authorGenres.innerHTML = `
+//     authorGenres.innerHTML = `
     
-        <h3>Ваши жанры:</h3>
-        <p>${[...selectedGenres]}</p>
-    `
-}
+//         <h3>Ваши жанры:</h3>
+//         <p>${[...selectedGenres]}</p>
+//     `
+// }
 
 
-document.addEventListener('DOMContentLoaded', renderAuthorGenres);
+// document.addEventListener('DOMContentLoaded', renderAuthorGenres);
 
 
 

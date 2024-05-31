@@ -22,7 +22,9 @@ class Reader extends User {
     }
 }
 
-const users = []
+// const user1 = new Reader ({name: 'mia', email: 'mia@gmail.com', password: '12345'})
+
+const users = [new Reader ({name: 'mia', email: 'mia@gmail.com', password: '12345'})]
 
 // REGISTRATION
 

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your account</title>
+
+    <link rel="stylesheet" href="personalPage.css">
 </head>
 
 <body>
@@ -15,12 +17,20 @@
     </div>
 
     <div id="personalPageBody">
-
     </div>
+
+    <button class="selectGenresButton">Выбрать жанры</button>
+
 
     <button class="logOutButton">Выход</button>
 
-    <script src="personalPage.js"></script>
+    <div class="selectGenres">
+        <h2>Выберите жанры:</h2>
+
+        <div class="genresMenu"></div>
+    </div>
+    
+    <script src="personalPage.js" type="module"></script>
 </body>
 
 </html>

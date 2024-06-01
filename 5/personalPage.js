@@ -2,6 +2,8 @@ import genresArray from './genres.js';
 
 const role = localStorage.getItem('userRole')
 const name = localStorage.getItem('userName')
+const email = localStorage.getItem('userEmail')
+
 
 const greetingMessage = document.getElementById('greetingMessage')
 const personalPageBody = document.getElementById('personalPageBody')
@@ -13,7 +15,7 @@ const genresMenu = document.querySelector('.genresMenu')
 greetingMessage.innerHTML = `Hello, ${name}!`
 
 if (role === 'Author') {
-    const selectedGenres = JSON.parse(localStorage.getItem('authorGenres')) || []
+    const selectedGenres = JSON.parse(localStorage.getItem(`${email}-Genres`)) || []
 
     personalPageBody.innerHTML = `
     <div class="author-dashboard">
@@ -42,7 +44,12 @@ if (role === 'Author') {
 }
 
 logOutButton.addEventListener('click', () => {
-    localStorage.clear()
+    // localStorage.clear()
+
+    localStorage.removeItem('userName')
+    localStorage.removeItem('userRole')
+    localStorage.removeItem('userEmail')
+
     window.location.replace('./fifth.html')
 })
 
@@ -52,7 +59,7 @@ const renderGenresMenu = () => {
     selectGenres.style.display = 'flex';
     genresMenu.innerHTML = '';
 
-    const selectedGenres = JSON.parse(localStorage.getItem('authorGenres')) || [];
+    const selectedGenres = JSON.parse(localStorage.getItem(`${email}-Genres`)) || [];
 
     genresArray.forEach(genre => {
         let genreBtn = document.createElement('button');
@@ -74,7 +81,7 @@ const renderGenresMenu = () => {
                 console.log(`Жанр ${targetName} уже выбран`);
             }
 
-            localStorage.setItem('authorGenres', JSON.stringify(selectedGenres));
+            localStorage.setItem(`${email}-Genres`, JSON.stringify(selectedGenres));
 
             if (selectedGenres.includes(targetName)) {
                 event.target.style.color = 'red';

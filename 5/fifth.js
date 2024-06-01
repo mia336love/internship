@@ -1,5 +1,5 @@
 class User {
-    constructor({name , email, password}) {      // деструктуризация options
+    constructor({ name, email, password }) {      // деструктуризация options
         this.name = name
         this.email = email
         this.password = password
@@ -11,20 +11,21 @@ class User {
 }
 
 class Author extends User {
-    constructor({name, email, password}) {
-        super({name, email, password})  // данные как у User
+    constructor({ name, email, password }) {
+        super({ name, email, password })  // данные как у User
     }
 }
 
 class Reader extends User {
-    constructor({name, email, password}) {
-        super({name, email, password})  // данные как у User
+    constructor({ name, email, password }) {
+        super({ name, email, password })  // данные как у User
     }
 }
 
-// const user1 = new Reader ({name: 'mia', email: 'mia@gmail.com', password: '12345'})
-
-const users = [new Reader ({name: 'mia', email: 'mia@gmail.com', password: '12345'})]
+const users = [
+    new Reader({ name: 'mia', email: 'mia@gmail.com', password: '12345' }),
+    new Author({ name: 'Katy P.', email: 'kattyperry@gmail.com', password: '12345' })
+]
 
 // REGISTRATION
 
@@ -34,19 +35,22 @@ const becomeAuthor = (name, email, password) => {
         email: email,
         password: password
     })
-    users.push(newUser)
-    console.log('Новый пользователь зарегестрирован');
-}
+    users.push(newUser);
+    alert('Регистрация прошла успешно!')
+};
+
 
 const becomeReader = (name, email, password) => {
     let newUser = new Reader({
         name: name,
         email: email,
         password: password
-    })
-    users.push(newUser)
-    console.log('A new reader has been registered');
-}
+    });
+    users.push(newUser);
+
+    alert('Регистрация прошла успешно!')
+};
+
 
 document.getElementById('authorButton').addEventListener('click', (event) => {
     event.preventDefault();
@@ -54,6 +58,13 @@ document.getElementById('authorButton').addEventListener('click', (event) => {
     let name = document.getElementById('regName').value
     let email = document.getElementById('regEmail').value
     let password = document.getElementById('regPassword').value
+
+    for (let user of users) {
+        if (user.email === email) {
+            alert('Пользователь с такой эл. почтой уже зарегестрирован')
+            return
+        }
+    }
 
     becomeAuthor(name, email, password)
 })
@@ -64,6 +75,13 @@ document.getElementById('readerButton').addEventListener('click', (event) => {
     let name = document.getElementById('regName').value
     let email = document.getElementById('regEmail').value
     let password = document.getElementById('regPassword').value
+
+    for (let user of users) {
+        if (user.email === email) {
+            alert('Пользователь с такой эл. почтой уже зарегестрирован')
+            return
+        }
+    }
 
     becomeReader(name, email, password)
 })
@@ -77,20 +95,20 @@ const login = (name, email, password) => {
             let role = user.constructor.name
             let name = user.name
 
-            console.log('Пользователь существует');
-            
-
             localStorage.setItem('userRole', role)
             localStorage.setItem('userName', name)
+            localStorage.setItem('userEmail', email)
 
             window.location.replace('./personalPage.html')
 
-            return
+            userWasFounded = true
+            break
 
-
-        } else {
-            console.log('Пользователя не существует')
         }
+    }
+
+    if (!userWasFounded) {
+        alert('Такого пользователя не существует')
     }
 }
 

@@ -30,24 +30,15 @@ const users = [
 // REGISTRATION
 
 const becomeAuthor = (name, email, password) => {
-    let newUser = new Author({
-        name: name,
-        email: email,
-        password: password
-    })
+    let newUser = new Author({name, email, password})
     users.push(newUser);
     alert('Регистрация прошла успешно!')
 };
 
 
 const becomeReader = (name, email, password) => {
-    let newUser = new Reader({
-        name: name,
-        email: email,
-        password: password
-    });
+    let newUser = new Reader({name, email, password});
     users.push(newUser);
-
     alert('Регистрация прошла успешно!')
 };
 

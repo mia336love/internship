@@ -53,8 +53,6 @@ logOutButton.addEventListener('click', () => {
     window.location.replace('./fifth.html')
 })
 
-console.log(...genresArray);
-
 const renderGenresMenu = () => {
     selectGenres.style.display = 'flex';
     genresMenu.innerHTML = '';

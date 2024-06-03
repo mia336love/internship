@@ -12,12 +12,17 @@ const selectGenres = document.querySelector('.selectGenres')
 const selectGenresButton = document.querySelector('.selectGenresButton')
 const genresMenu = document.querySelector('.genresMenu')
 
-greetingMessage.innerHTML = `Hello, ${name}!`
+if (name !== null) {
+    greetingMessage.innerHTML = `Hello, ${name}!`
+} else {
+    alert('Внимание! Данные об имени нарушены')
+}
 
-if (role === 'Author') {
-    const selectedGenres = JSON.parse(localStorage.getItem(`${email}-Genres`)) || []
+if (role !== null) {
+    if (role === 'Author') {
+        const selectedGenres = JSON.parse(localStorage.getItem(`${email}-Genres`)) || []
 
-    personalPageBody.innerHTML = `
+        personalPageBody.innerHTML = `
     <div class="author-dashboard">
         <section class="stats">
             <h3>Статистика</h3>
@@ -33,15 +38,20 @@ if (role === 'Author') {
         </section>
     </div>
     `
-} else if (role === 'Reader') {
+    } else if (role === 'Reader') {
 
-    personalPageBody.innerHTML = `
+        personalPageBody.innerHTML = `
     <section class="stats">
         <p>Прочитано статей: 25</p>
         <p>Оставлено комментариев: 15</p>
     </section>
     `
+    }
+} else if (role === null) {
+    alert('Внимание! Данные о роли нарушены')
 }
+
+
 
 logOutButton.addEventListener('click', () => {
     // localStorage.clear()
@@ -57,7 +67,16 @@ const renderGenresMenu = () => {
     selectGenres.style.display = 'flex';
     genresMenu.innerHTML = '';
 
-    const selectedGenres = JSON.parse(localStorage.getItem(`${email}-Genres`)) || [];
+    let selectedGenres;
+
+    if (email !== null) {
+        selectedGenres = JSON.parse(localStorage.getItem(`${email}-Genres`)) || [];
+    } else {
+        selectGenres.style.display = 'none';
+        genresMenu.innerHTML = '';
+        alert('Внимание! Жанры не могут быть выбраны, потому что нарушены данные об эл. почте')
+        return
+    }
 
     genresArray.forEach(genre => {
         let genreBtn = document.createElement('button');

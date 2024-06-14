@@ -4,7 +4,6 @@ const role = localStorage.getItem('userRole')
 const name = localStorage.getItem('userName')
 const email = localStorage.getItem('userEmail')
 
-
 const greetingMessage = document.getElementById('greetingMessage')
 const personalPageBody = document.getElementById('personalPageBody')
 const logOutButton = document.querySelector('.logOutButton')

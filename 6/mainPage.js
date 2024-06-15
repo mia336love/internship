@@ -22,6 +22,10 @@ document.getElementById('changePageBtn').addEventListener('click', () => {
     window.location.href = './3rdPage.html'
 })
 
+document.getElementById('changeHistoryBtn').addEventListener('click', () => {
+    history.pushState({ page: 1 }, "title 1", "?page=1");
+    console.log("New state added to history");
+});
 
 //--------Cookie----------
 

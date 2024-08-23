@@ -1,26 +1,21 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import AsyncButton from './Components/SearchReposButtons/AsyncButton';
+import PromiseButton from './Components/SearchReposButtons/PromiseButton';
+
+import SearchReposInput from './Components/SearchReposInput/SearchReposInput';
+import SearchReposResults from './Components/SearchReposResults/SearchReposResults'
 
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-{/* 
-      <h1>GitHub Repositories of User... mia336love</h1>
-      <ul id="repo-list"></ul> */}
+      <SearchReposInput />
+
+      <PromiseButton />
+      <AsyncButton />
+
+      <SearchReposResults />
+
     </div>
   );
 }

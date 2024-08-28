@@ -1,0 +1,50 @@
+.cats-pics-main {
+  display: grid;
+
+  grid-template-columns: repeat(3, 30em);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+
+  grid-template-areas:
+    "cat1 cat6 cat5"
+    "cat2 cat3 cat4"
+    /* "cat2 cat2 cat5" */;
+}
+
+#cat1 {
+  grid-area: cat1;
+}
+
+#cat2 {
+  grid-area: cat2;
+}
+
+#cat3 {
+  grid-area: cat3;
+}
+
+#cat4 {
+  grid-area: cat4;
+}
+
+#cat5 {
+  grid-area: cat5;
+}
+
+#cat6 {
+    grid-area: cat6;
+  }
+/* 
+.cats-pics-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0;
+    padding: 0;
+  }
+   */
+  .cats-pics-main img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  

@@ -1,0 +1,15 @@
+/* NavigationMenu.module.css */
+.navMenu {
+  display: flex;
+  justify-content: space-around;
+  width: 11em;
+
+  align-items: center;
+
+  font-size: 2em;
+  /* text-decoration: none; */
+}
+
+.link {
+  text-decoration: none;
+}

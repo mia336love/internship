@@ -25,7 +25,7 @@ function PromiseButton({ inputValue, onPromiseClick }) {
 
   return (
     <div className="promise-button">
-      <button onClick={getReposPromise}>Get Repositories (Promise)</button>
+      <button onClick={getReposPromise}>Get Repositories</button>
     </div>
   );
 }

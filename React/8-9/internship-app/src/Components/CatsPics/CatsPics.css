@@ -32,19 +32,11 @@
 }
 
 #cat6 {
-    grid-area: cat6;
-  }
-/* 
-.cats-pics-main {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 0;
-    padding: 0;
-  }
-   */
-  .cats-pics-main img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
+  grid-area: cat6;
+}
+
+.cats-pics-main img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

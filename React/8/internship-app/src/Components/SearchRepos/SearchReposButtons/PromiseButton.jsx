@@ -1,5 +1,3 @@
-// import userName from '../SearchReposInput'
-
 function PromiseButton({ inputValue, onPromiseClick }) {
   function getReposPromise() {
     const userName = inputValue;
@@ -15,17 +13,6 @@ function PromiseButton({ inputValue, onPromiseClick }) {
         return response.json();
       })
       .then((data) => {
-        // if (data.length === 0) {
-        //   return;
-        // }
-
-        // data.forEach((repo) => {
-        //   onPromiseClick(repo);
-        //   // console.log(repo);
-        //   console.log('Данные обработаны');
-          
-        // });
-
         onPromiseClick(data)
       })
       .catch((error) => {

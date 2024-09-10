@@ -7,7 +7,7 @@ import CatsPics from "../CatsPics/CatsPics";
 import Blog from "../Blog/Blog";
 
 import styles from "./NavigationMenu.module.css";
-import ScrollPosition from "../Blog/ScrollPosition";
+import ScrollPosition from "../ScrollPosition/ScrollPosition";
 
 function NavigationMenu() {
   return (

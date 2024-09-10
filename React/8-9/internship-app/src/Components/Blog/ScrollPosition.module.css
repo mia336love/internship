@@ -1,0 +1,8 @@
+.ScrollPositionArea {
+  background-color: bisque;
+  height: 1000vh;
+}
+
+.scrollPositionValue {
+    position: fixed;
+}

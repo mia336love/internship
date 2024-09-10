@@ -7,6 +7,7 @@ import CatsPics from "../CatsPics/CatsPics";
 import Blog from "../Blog/Blog";
 
 import styles from "./NavigationMenu.module.css";
+import ScrollPosition from "../Blog/ScrollPosition";
 
 function NavigationMenu() {
   return (
@@ -31,7 +32,9 @@ function NavigationMenu() {
           <Link className={styles.link} to="/blog">
             Blog
           </Link>
-
+          <Link className={styles.link} to="/scroll">
+            Scroll
+          </Link>
         </nav>
 
         <Routes>
@@ -39,10 +42,10 @@ function NavigationMenu() {
           <Route path="/" exact element={<Home />} />
           <Route path="/search-repo" element={<SearchReposMain />} />
           <Route path="/cats-pics" element={<CatsPics />} />
-          
+
           {/* 10 */}
           <Route path="/blog" element={<Blog />} />
-
+          <Route path="/scroll" element={<ScrollPosition />} />
         </Routes>
       </Router>
     </div>

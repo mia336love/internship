@@ -1,7 +1,6 @@
 .navMenu {
   display: flex;
   justify-content: space-around;
-  width: 20em;
 
   align-items: center;
 
@@ -10,8 +9,4 @@
 
 .link {
   text-decoration: none;
-}
-
-.iterationNumbers {
-  /* margin-right: 1em; */
 }

@@ -9,6 +9,9 @@ import Blog from "../Blog/Blog";
 import styles from "./NavigationMenu.module.css";
 import ScrollPosition from "../ScrollPosition/ScrollPosition";
 
+import ClassLifecycleComponent from "../LifecycleComponents/ClassLifecycleComponent";
+import FunctionalLifecycleComponent from "../LifecycleComponents/FunctionalLifecycleComponent";
+
 function NavigationMenu() {
   return (
     <div className={styles.navigationMenuMain}>
@@ -35,6 +38,14 @@ function NavigationMenu() {
           <Link className={styles.link} to="/scroll">
             Scroll
           </Link>
+
+          <p className={styles.iterationNumbers}>11:</p>
+          <Link className={styles.link} to="/lifecycle-class">
+            Life cycle (class)
+          </Link>
+          <Link className={styles.link} to="/lifecycle-functional">
+            Life cycle (func)
+          </Link>
         </nav>
 
         <Routes>
@@ -46,6 +57,16 @@ function NavigationMenu() {
           {/* 10 */}
           <Route path="/blog" element={<Blog />} />
           <Route path="/scroll" element={<ScrollPosition />} />
+
+          {/* 11 */}
+          <Route
+            path="/lifecycle-class"
+            element={<ClassLifecycleComponent />}
+          />
+          <Route
+            path="/lifecycle-functional"
+            element={<FunctionalLifecycleComponent />}
+          />
         </Routes>
       </Router>
     </div>

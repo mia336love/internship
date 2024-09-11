@@ -1,29 +1,17 @@
-import { useEffect, useState } from "react";
+
 import styles from "./ScrollPosition.module.css";
 
+import useScrollPosition from "../CustomHooks/useScrollPosition";
+
 const ScrollPosition = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
 
-  useEffect(() => {
-    function handleScroll() {
-      setScrollPosition(window.scrollY);
-    }
-
-    // подписка
-    window.addEventListener("scroll", handleScroll);
-
-    setScrollPosition(window.scrollY);
-
-    // отписка
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      console.log("Компонент размонтирован");
-    };
-  }, []);
+  const scrollY = useScrollPosition()
 
   return (
     <div className={styles.ScrollPositionArea}>
-      <h1 className={styles.scrollPositionValue}>Scroll Position: {scrollPosition}</h1>
+      <h1 className={styles.scrollPositionValue}>
+        Scroll Position: {scrollY}
+      </h1>
     </div>
   );
 };

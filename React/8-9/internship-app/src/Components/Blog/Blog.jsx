@@ -1,6 +1,5 @@
 import styles from "./Blog.module.css";
 import RenderBlog from "./RenderBlog";
-// import ScrollPosition from "./ScrollPosition";
 
 const Blog = () => {
   return (

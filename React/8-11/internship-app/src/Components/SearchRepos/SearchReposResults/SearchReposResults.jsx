@@ -2,6 +2,9 @@ import React from "react";
 
 function SearchReposResults({ repos }) {
   const renderReposResults = () => {
+
+    console.log(repos);
+    
     if (repos === 0) {
       return React.createElement("p", null, "No repositories found...");
     }

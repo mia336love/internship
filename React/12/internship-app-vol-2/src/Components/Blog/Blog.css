@@ -1,0 +1,28 @@
+.blogMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    max-width: 30%;
+    height: 42vh;
+  
+    margin-bottom: 3%;
+  
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+  
+  .postBody {
+    width: 80%;
+  }
+  
+  
+  .nightTheme {}

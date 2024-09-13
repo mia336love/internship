@@ -10,9 +10,8 @@ const App = () => {
     <div className="App">
       {/* <NavigationMenu /> */}
 
-      {/* <SearchReposMain />
-      <ScrollPosition /> */}
-
+      <SearchReposMain />
+      <ScrollPosition />
       <Blog />
     </div>
   );

@@ -9,7 +9,7 @@ import SearchReposMain from './Components/SearchRepos/SearchReposMain';
 import Blog from './Components/Blog/Blog';
 import Home from './Components/Home/Home';
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <Router>
       <div>

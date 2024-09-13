@@ -10,18 +10,17 @@ import Blog from './Components/Blog/Blog';
 import Home from './Components/Home/Home';
 
 const App = () => {
+
   return (
     <Router>
-      <div>
+      <div className='App'>
         <NavigationMenu />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/scroll" element={<ScrollPosition />} />
-            <Route path="/search-repos" element={<SearchReposMain />} />
-            <Route path="/blog" element={<Blog />} />
-          </Routes>
-        </main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/scroll" element={<ScrollPosition />} />
+          <Route path="/search-repos" element={<SearchReposMain />} />
+          <Route path="/blog" element={<Blog />} />
+        </Routes>
       </div>
     </Router>
   );

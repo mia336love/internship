@@ -8,13 +8,10 @@ const useScrollPosition = (): number => {
       setScrollPosition(window.scrollY);
     };
 
-    // Подписка на событие скролла
     window.addEventListener("scroll", handleScroll);
 
-    // Установка начального значения
     setScrollPosition(window.scrollY);
 
-    // Очистка подписки при размонтировании
     return () => {
       window.removeEventListener("scroll", handleScroll);
       console.log("Компонент размонтирован");

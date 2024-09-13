@@ -19,11 +19,8 @@ const Blog = () => {
 
     return (
         <div className="blogMain">
-            <h1>This is a blog page</h1>
-
+            <h1>Blog page</h1>
             <RenderBlog render={renderPosts} />
-
-            {/* <ScrollPosition /> */}
         </div>
     );
 };

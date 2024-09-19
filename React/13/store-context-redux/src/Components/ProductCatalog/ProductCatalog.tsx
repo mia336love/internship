@@ -4,7 +4,7 @@ const ProductCatalog = () => {
     <div>
         <h2>Catalog</h2>
         <div className="catalog-items">
-            {}
+            {/* {ArrProducts.map((item) => {})} */}
         </div>
     </div>
 

@@ -1,8 +1,8 @@
 enum Genres {
-    Electronic,
-    Rock,
-    Pop,
-    Britpop,
+    Electronic = "Electronic",
+    Rock = "Rock",
+    Pop = "Pop",
+    Britpop = "Britpop",
     AlternativeRock = "Alternative rock",
     HipHop = 'Hip Hop',
     ArtRock = 'Art rock',

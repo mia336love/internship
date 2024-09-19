@@ -6,19 +6,21 @@ interface IProductItemProps {
 }
 
 const ProductItem = ({ product, onAddToCart }: IProductItemProps) => {
-    <div>
-        <div className="item">
-            <img src={product.imageUrl} alt={product.name} />
-            <h3>{product.artist} — {product.name}</h3>
-            <p>{product.genres.map((genre) => (
-                <span>{genre}</span>
-            ))}</p>
-            <p>Released: {product.year}</p>
-            <p>Price: ${product.price}</p>
 
-            <button onClick={() => onAddToCart(product)}>Add to Cart</button>
+    return (
+        <div>
+            <div className="item">
+                <img src={product.imageUrl} alt={product.name} />
+                <h3>{product.artist ? `${product.artist} — ${product.name}` : `${product.name}`}</h3>
+                <p>{product.genres.length > 0 ? product.genres.join(' / ') : 'No genres available'}</p>
+                <p>Released: {product.year}</p>
+                <p>Price: {product.price}₽</p>
+
+                <button onClick={() => onAddToCart(product)}>Add to Cart</button>
+            </div>
         </div>
-    </div>
+    )
+
 
 }
 

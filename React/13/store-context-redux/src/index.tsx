@@ -4,11 +4,7 @@ import './index.css';
 import App from './App';
 
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import cartReducer from './Reducers/cartReducer';
-import rootReducer from './Reducers/rootReducer';
-
-const store = createStore(rootReducer)
+import store from './Data/store';
 
 
 const root = ReactDOM.createRoot(

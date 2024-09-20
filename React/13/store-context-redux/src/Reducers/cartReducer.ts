@@ -22,7 +22,7 @@ function cartReducer(state = InitialState, action: CartAction): SelectedProducts
         case 'ADD':
             console.log('added into cart');
             console.log(state);
-
+            
             return {
 
 
@@ -34,10 +34,9 @@ function cartReducer(state = InitialState, action: CartAction): SelectedProducts
                 ...state,
                 products: state.products.filter(product => product.id !== action.productId)
             };
-        default:
-            return state;
+            
     }
-
+    
 }
 
 export default cartReducer

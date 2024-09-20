@@ -1,19 +1,16 @@
-import ArrProducts from "../../Data/ArrProducts"
-import IProduct from "../../Data/Interfaces/IProduct"
-import ProductItem from "../ProductItem/ProductItem"
-
-import './ProductCatalog.css'
-
-import { useDispatch } from "react-redux"
-
+import ArrProducts from "../../Data/ArrProducts";
+import IProduct from "../../Data/Interfaces/IProduct";
+import ProductItem from "../ProductItem/ProductItem";
+import './ProductCatalog.css';
+import { useDispatch } from "react-redux";
+import { addProductToCart } from "../../Reducers/cartReducer";
 
 const ProductCatalog = () => {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
-    
     const handleAddToCart = (product: IProduct) => {
-        dispatch({type: 'ADD', product})
-    }
+        dispatch(addProductToCart(product));
+    };
 
     return (
         <div>
@@ -28,9 +25,7 @@ const ProductCatalog = () => {
                 ))}
             </div>
         </div>
-    )
+    );
+};
 
-
-}
-
-export default ProductCatalog
+export default ProductCatalog;

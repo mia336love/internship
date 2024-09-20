@@ -1,0 +1,24 @@
+.cart {
+    display: flex;
+}
+
+.cart-pr-img {
+    height: 5em;
+}
+
+.cart-pr-name {
+    font-size: 1em;
+}
+
+.cart-pr-price {
+    /* margin-left: 2em; */
+}
+
+.cart-item {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+    width: 40em;
+}

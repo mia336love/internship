@@ -1,22 +1,26 @@
 import { useSelector } from "react-redux"
 import { RootState } from "../../Reducers/RootState"
+import './ShoppingCart.css'
 
 const ShoppingCart = () => {
 
     const cartProducts = useSelector((state: RootState) => state.cart.products)
     return (
         <div>
-            {cartProducts.length === 0 ? (<p>Корзина пуста</p>) : (
-                <ul>
-                    {cartProducts.map((product) => (
-                        <li>
-                            <img src={product.imageUrl} alt="" />
-                            <p>{product.name}</p>
-                            <p>{product.price}</p>
-                        </li>
+            {cartProducts.length === 0 ? (<p>Cart is empty</p>) : (
+                <div className="cart">
+                    <h3>Your cart:</h3>
+                    <ul>
+                        {cartProducts.map((product) => (
+                            <li className="cart-item">
+                                <img className="cart-pr-img" src={product.imageUrl} alt="" />
+                                <p className="cart-pr-name">{product.name}</p>
+                                <p className="cart-pr-price">{product.price}₽</p>
+                            </li>
 
-                    ))}
-                </ul>
+                        ))}
+                    </ul>
+                </div>
             )}
         </div>
     )

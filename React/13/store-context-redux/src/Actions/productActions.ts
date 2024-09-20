@@ -1,10 +1,15 @@
 import { Dispatch } from "redux";
 import ArrProducts from "../Data/ArrProducts";
+import IProduct from "../Data/Interfaces/IProduct";
 
-const fetchProducts = () => {
-    return (dispatch: Dispatch) => {
+interface SetProductsAction {
+    type: 'SET_PRODUCTS';
+    products: IProduct[];
+}
+
+export const fetchProducts = () => {
+    return (dispatch: Dispatch<SetProductsAction>) => {
         setTimeout(() => {
-            // имитация получения данных с сервера
             dispatch({
                 type: 'SET_PRODUCTS',
                 products: ArrProducts,

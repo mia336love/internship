@@ -4,11 +4,6 @@ export type SelectedProductsState = {
     products: IProduct[]
 }
 
-// type CartAction = {
-//     type: "ADD" | "REMOVE";
-//     product: IProduct;
-// };
-
 export type CartAction =
     | { type: 'ADD'; product: IProduct }
     | { type: 'REMOVE'; productId: number }
@@ -24,8 +19,6 @@ function cartReducer(state = InitialState, action: CartAction): SelectedProducts
             console.log(state);
             
             return {
-
-
                 ...state,
                 products: [...state.products, action.product]
             };

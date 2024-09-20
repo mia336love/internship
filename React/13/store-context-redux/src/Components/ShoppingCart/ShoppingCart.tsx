@@ -7,9 +7,10 @@ const ShoppingCart = () => {
     const cartProducts = useSelector((state: RootState) => state.cart.products)
     return (
         <div>
+            <h3>Your cart:</h3>
+
             {cartProducts.length === 0 ? (<p>Cart is empty</p>) : (
                 <div className="cart">
-                    <h3>Your cart:</h3>
                     <ul>
                         {cartProducts.map((product) => (
                             <li className="cart-item">

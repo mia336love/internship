@@ -2,6 +2,8 @@ import ArrProducts from "../../Data/ArrProducts"
 import IProduct from "../../Data/Interfaces/IProduct"
 import ProductItem from "../ProductItem/ProductItem"
 
+import './ProductCatalog.css'
+
 import { useDispatch } from "react-redux"
 
 

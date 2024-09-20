@@ -8,7 +8,6 @@ interface IProductItemProps {
 const ProductItem = ({ product, onAddToCart }: IProductItemProps) => {
 
     return (
-        <div>
             <div className="item">
                 <img src={product.imageUrl} alt={product.name} />
                 <h3>{product.artist ? `${product.artist} — ${product.name}` : `${product.name}`}</h3>
@@ -18,10 +17,7 @@ const ProductItem = ({ product, onAddToCart }: IProductItemProps) => {
 
                 <button onClick={() => onAddToCart(product)}>Add to Cart</button>
             </div>
-        </div>
     )
-
-
 }
 
 export default ProductItem

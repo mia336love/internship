@@ -20,7 +20,12 @@ const InitialState: SelectedProductsState = {
 function cartReducer(state = InitialState, action: CartAction): SelectedProductsState {
     switch (action.type) {
         case 'ADD':
+            console.log('added into cart');
+            console.log(state);
+
             return {
+
+
                 ...state,
                 products: [...state.products, action.product]
             };
@@ -29,7 +34,10 @@ function cartReducer(state = InitialState, action: CartAction): SelectedProducts
                 ...state,
                 products: state.products.filter(product => product.id !== action.productId)
             };
+        default:
+            return state;
     }
+
 }
 
 export default cartReducer

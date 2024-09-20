@@ -1,6 +1,6 @@
 import IProduct from "../Data/Interfaces/IProduct"
 
-type SelectedProductsState = {
+export type SelectedProductsState = {
     products: IProduct[]
 }
 
@@ -9,7 +9,7 @@ type SelectedProductsState = {
 //     product: IProduct;
 // };
 
-type CartAction =
+export type CartAction =
     | { type: 'ADD'; product: IProduct }
     | { type: 'REMOVE'; productId: number }
 

@@ -2,9 +2,16 @@ import ArrProducts from "../../Data/ArrProducts"
 import IProduct from "../../Data/Interfaces/IProduct"
 import ProductItem from "../ProductItem/ProductItem"
 
-const ProductCatalog = () => {
+import { useDispatch } from "react-redux"
 
-    const handleAddToCart = (product: IProduct) => { }
+
+const ProductCatalog = () => {
+    const dispatch = useDispatch()
+
+    const handleAddToCart = (product: IProduct) => {
+        dispatch({type: 'ADD', product})
+    }
+
     return (
         <div>
             <h2>Catalog</h2>
